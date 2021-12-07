@@ -14,7 +14,7 @@ public class HorrorScopeService {
         this.horrorScopeDAO = horrorScopeDAO;
     }
 
-    //select Recipe method being called from interface.
+
     public List<HorrorScope> getHorrorScope() {
         return horrorScopeDAO.selectHorrorScopes();
     }
