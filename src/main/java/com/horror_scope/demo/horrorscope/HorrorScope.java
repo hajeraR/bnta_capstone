@@ -13,12 +13,12 @@ public class HorrorScope {
     private String positiveMatch;
     private String negativeMatch;
     private String deathPrediction;
-    private String description1;
-    private String description2;
-    private String description3;
-    private String description4;
+    private String romance;
+    private String family;
+    private String money;
+    private String career;
 
-    public HorrorScope(String zodiacSign, String zodiacIcon, String zodiacIconDark, String zodiacImage, String zodiacImageDark, String personality, String positiveMatch, String negativeMatch, String deathPrediction, String description1, String description2, String description3, String description4) {
+    public HorrorScope(String zodiacSign, String zodiacIcon, String zodiacIconDark, String zodiacImage, String zodiacImageDark, String personality, String positiveMatch, String negativeMatch, String deathPrediction, String romance, String family, String money, String career) {
         this.zodiacSign = zodiacSign;
         this.zodiacIcon = zodiacIcon;
         this.zodiacIconDark = zodiacIconDark;
@@ -28,10 +28,10 @@ public class HorrorScope {
         this.positiveMatch = positiveMatch;
         this.negativeMatch = negativeMatch;
         this.deathPrediction = deathPrediction;
-        this.description1 = description1;
-        this.description2 = description2;
-        this.description3 = description3;
-        this.description4 = description4;
+        this.romance = romance;
+        this.family = family;
+        this.money = money;
+        this.career = career;
     }
 
     public String getZodiacSign() {
@@ -106,37 +106,14 @@ public class HorrorScope {
         this.deathPrediction = deathPrediction;
     }
 
-    public String getDescription1() {
-        return description1;
-    }
+    public String getRomance() { return romance;}
 
-    public void setDescription1(String description1) {
-        this.description1 = description1;
-    }
+    public void setRomance(String romance) { this.romance = romance; }
 
-    public String getDescription2() {
-        return description2;
-    }
+    public String getFamily return romance;}
 
-    public void setDescription2(String description2) {
-        this.description2 = description2;
-    }
+    public void setRomance(String romance) { this.romance = romance; }
 
-    public String getDescription3() {
-        return description3;
-    }
-
-    public void setDescription3(String description3) {
-        this.description3 = description3;
-    }
-
-    public String getDescription4() {
-        return description4;
-    }
-
-    public void setDescription4(String description4) {
-        this.description4 = description4;
-    }
 
     @Override
     public String toString() {

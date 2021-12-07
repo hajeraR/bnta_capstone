@@ -3,6 +3,8 @@ package com.horror_scope.demo.emails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping(path = "emails")
 public class EmailController {
@@ -12,6 +14,11 @@ public class EmailController {
     @Autowired
     public EmailController(EmailService emailService) {
         this.emailService = emailService;
+    }
+
+    @Autowired
+    public Optional<Email> getEmailByEmail(@PathVariable("email") String email) {
+        return emailService.getEmail(email);
     }
 
     @PostMapping
