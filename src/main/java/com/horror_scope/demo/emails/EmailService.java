@@ -1,5 +1,9 @@
 package com.horror_scope.demo.emails;
 
+import com.horror_scope.demo.exception.Exceptions;
+import org.springframework.stereotype.Service;
+
+@Service
 public class EmailService{
 
     private EmailDAO emailDAO;
@@ -11,14 +15,11 @@ public class EmailService{
     }
 
     public void addEmail (String email, String zodiac){
-        boolean valid = emailValidator.isValid(email)
-                .orElseThrow(() =>
-                            new ResourseNotFound("Email is not valid!");
-        );
+
         if (emailValidator.isValid(email)){
             emailDAO.insertEmail(email, zodiac);
         } else {
-            t
+            throw new Exceptions("Email is not valid");
         }
 
     }
@@ -28,7 +29,7 @@ public class EmailService{
     }
 
     public EmailService() {
-        //function for sending email
+        //function for sending email to user
     }
 
     public boolean sendEmail(Email email) {
