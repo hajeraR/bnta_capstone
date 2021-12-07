@@ -9,3 +9,4 @@ public class Exceptions extends RuntimeException {
         super(message);
     }
 }
+
