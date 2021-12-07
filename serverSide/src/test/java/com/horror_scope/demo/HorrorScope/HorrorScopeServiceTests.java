@@ -4,6 +4,8 @@ import com.horror_scope.demo.exception.Exceptions;
 import com.horror_scope.demo.horrorscope.HorrorScope;
 import com.horror_scope.demo.horrorscope.HorrorScopeDAO;
 import com.horror_scope.demo.horrorscope.HorrorScopeService;
+import com.horror_scope.demo.monthlyHorrorScopes.MonthlyHorrorScope;
+import com.horror_scope.demo.monthlyHorrorScopes.MonthlyHorrorScopeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +20,8 @@ public class HorrorScopeServiceTests {
 
     private HorrorScopeDAO horrorScopeDAO;
     private HorrorScopeService underTest;
+//    private MonthlyHorrorScope monthlyHorrorScope;
+//    private MonthlyHorrorScopeService
 
     @BeforeEach
     void setUp() {
@@ -75,5 +79,6 @@ public class HorrorScopeServiceTests {
 
 
     }
+
 
 }
