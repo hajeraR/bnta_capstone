@@ -6,11 +6,21 @@ public class EmailService{
     private EmailValidator emailValidator;
 
     public EmailService (EmailDAO emailDAO){
+
         this.emailDAO = emailDAO;
     }
 
     public void addEmail (String email, String zodiac){
-        emailDAO.insertEmail(email, zodiac);
+        boolean valid = emailValidator.isValid(email)
+                .orElseThrow(() =>
+                            new ResourseNotFound("Email is not valid!");
+        );
+        if (emailValidator.isValid(email)){
+            emailDAO.insertEmail(email, zodiac);
+        } else {
+            t
+        }
+
     }
 
     public void deleteEmail (String email){
@@ -18,7 +28,7 @@ public class EmailService{
     }
 
     public EmailService() {
-        //function for sending email 
+        //function for sending email
     }
 
     public boolean sendEmail(Email email) {
