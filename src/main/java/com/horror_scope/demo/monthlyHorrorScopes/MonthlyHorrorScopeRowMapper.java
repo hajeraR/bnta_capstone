@@ -9,11 +9,17 @@ public class MonthlyHorrorScopeRowMapper implements RowMapper<MonthlyHorrorScope
 
     @Override
     public MonthlyHorrorScope mapRow(ResultSet rs, int rowNum) throws SQLException {
-        MonthlyHorrorScope monthlyHorrorScope = new  Mont(
+        MonthlyHorrorScope monthlyHorrorScope = new MonthlyHorrorScope(
                 rs.getInt("id"),
-                rs.getString("email"),
-                rs.getString("zodiac")
+                rs.getString("zodiacSign"),
+                rs.getString("months"),
+                rs.getString("horrorScope"),
+                rs.getString("zodiacIcon"),
+                rs.getString("zodiacIconDark"),
+                rs.getString("zodiacImage"),
+                rs.getString("zodiacImageDark"),
+                rs.getString("zodiacBackground")
         );
-        return email;
+        return monthlyHorrorScope;
     }
 }

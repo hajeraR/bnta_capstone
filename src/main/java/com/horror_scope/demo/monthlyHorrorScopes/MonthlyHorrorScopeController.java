@@ -21,12 +21,12 @@ public class MonthlyHorrorScopeController {
     }
 
     @GetMapping
-    public List<MonthlyHorrorScopeService> listMonthlyHorrorScopeService() {
+    public List<MonthlyHorrorScope> listMonthlyHorrorScopeService() {
         return monthlyHorrorScopeService.getMonthlyHorrorScope();
     }
 
     @GetMapping("{zodiacSign}")
-    public HorrorScope getMonthlyHorrorScopeByZodiacSign(@PathVariable("zodiacSign") String zodiacSign) {
+    public MonthlyHorrorScope getMonthlyHorrorScopeByZodiacSign(@PathVariable("zodiacSign") String zodiacSign) {
         return monthlyHorrorScopeService.getMonthlyHorrorScope(zodiacSign);
     }
 }
