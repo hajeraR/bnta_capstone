@@ -18,6 +18,7 @@ public class HorrorScopeRowMapper implements RowMapper<HorrorScope> {
                 resultSet.getString("zodiacIconDark"),
                 resultSet.getString("zodiacImage"),
                 resultSet.getString("zodiacImageDark"),
+                resultSet.getString("zodiacBackground"),
                 resultSet.getString("personality"),
                 resultSet.getString("positiveMatch"),
                 resultSet.getString("negativeMatch"),

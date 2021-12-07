@@ -1,5 +1,6 @@
 package com.horror_scope.demo.horrorscope;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public class HorrorScopeController {
 
     private HorrorScopeService horrorScopeService;
 
-
+    @Autowired
     public HorrorScopeController(HorrorScopeService horrorScopeService) {
         this.horrorScopeService = horrorScopeService;
     }

@@ -4,6 +4,8 @@ package com.horror_scope.demo.emails;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository("postgres")
 public class EmailDataAccessServer implements EmailDAO{
     private JdbcTemplate jdbcTemplate;
@@ -13,11 +15,21 @@ public class EmailDataAccessServer implements EmailDAO{
     }
 
     @Override
-    public int insertEmail(String email, String zodiac) {
+    public Optional<Email> selectEmailByEmail (String email) {
         String sql = """
-                INSERT INTO emails (email, zodiac) VALUES (?,?);
+                SELECT * FROM emails WHERE email = ?
                 """;
-        return jdbcTemplate.update(sql, email, zodiac);
+        return jdbcTemplate.query(sql, new EmailRowMapper(), email)
+                .stream()
+                .findFirst();
+    }
+
+    @Override
+    public int insertEmail(String email, String zodiacSign) {
+        String sql = """
+                INSERT INTO emails (email, zodiacSign) VALUES (?,?);
+                """;
+        return jdbcTemplate.update(sql, email, zodiacSign);
     }
 
     @Override

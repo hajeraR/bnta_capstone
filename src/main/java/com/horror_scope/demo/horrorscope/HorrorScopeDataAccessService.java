@@ -18,7 +18,7 @@ public class HorrorScopeDataAccessService implements HorrorScopeDAO{
     @Override
      public List<HorrorScope> selectHorrorScopes() {
         String sql = """               
-                
+                SELECT * FROM descriptions;
                 """;
         return jdbcTemplate.query(sql, new HorrorScopeRowMapper()) ;
     }
@@ -27,7 +27,7 @@ public class HorrorScopeDataAccessService implements HorrorScopeDAO{
      public Optional<HorrorScope> selectHorrorScopeByZodiacSign(String zodiacSign) {
 
         String sql = """
-                
+                SELECT * FROM descriptions WHERE zodiacSign = ?;
                 """;
 
         return jdbcTemplate.query(sql, new HorrorScopeRowMapper(), zodiacSign)
