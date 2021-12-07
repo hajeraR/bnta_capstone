@@ -13,8 +13,8 @@ public class EmailDataAccessServer implements EmailDAO{
     public EmailDataAccessServer(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
-    
-    @Override 
+
+    @Override
     public Optional<Email> selectEmailByEmail (String email) {
         String sql = """
                 SELECT * FROM emails WHERE email = ?
@@ -25,11 +25,11 @@ public class EmailDataAccessServer implements EmailDAO{
     }
 
     @Override
-    public int insertEmail(String email, String zodiac) {
+    public int insertEmail(String email, String zodiacSign) {
         String sql = """
-                INSERT INTO emails (email, zodiac) VALUES (?,?);
+                INSERT INTO emails (email, zodiacSign) VALUES (?,?);
                 """;
-        return jdbcTemplate.update(sql, email, zodiac);
+        return jdbcTemplate.update(sql, email, zodiacSign);
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.horror_scope.demo.monthlyHorrorScopes;
 
 import com.horror_scope.demo.horrorscope.HorrorScope;
 import com.horror_scope.demo.horrorscope.HorrorScopeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class MonthlyHorrorScopeController {
 
     private MonthlyHorrorScopeService monthlyHorrorScopeService;
 
-
+    @Autowired
     public MonthlyHorrorScopeController(MonthlyHorrorScopeService monthlyHorrorScopeService) {
         this.monthlyHorrorScopeService = monthlyHorrorScopeService;
     }

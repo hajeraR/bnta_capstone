@@ -5,12 +5,12 @@ import java.util.Objects;
 public class Email {
     private int id;
     private String email;
-    private String zodiac;
+    private String zodiacSign;
 
-    public Email(int id, String email, String zodiac) {
+    public Email(int id, String email, String zodiacSign) {
         this.id = id;
         this.email = email;
-        this.zodiac = zodiac;
+        this.zodiacSign = zodiacSign;
     }
 
     public int getId() {
@@ -29,12 +29,12 @@ public class Email {
         this.email = email;
     }
 
-    public String getZodiac() {
-        return zodiac;
+    public String getZodiacSign() {
+        return zodiacSign;
     }
 
-    public void setZodiac(String zodiac) {
-        this.zodiac = zodiac;
+    public void setZodiacSign(String zodiacSign) {
+        this.zodiacSign = zodiacSign;
     }
 
     @Override
@@ -42,12 +42,12 @@ public class Email {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Email email1 = (Email) o;
-        return id == email1.id && Objects.equals(email, email1.email) && Objects.equals(zodiac, email1.zodiac);
+        return id == email1.id && Objects.equals(email, email1.email) && Objects.equals(zodiacSign, email1.zodiacSign);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, zodiac);
+        return Objects.hash(id, email, zodiacSign);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class Email {
         return "Email{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
-                ", zodiac='" + zodiac + '\'' +
+                ", zodiacSign='" + zodiacSign + '\'' +
                 '}';
     }
 }

@@ -16,14 +16,14 @@ public class EmailController {
         this.emailService = emailService;
     }
 
-    @Autowired
+    @GetMapping("email={email}")
     public Optional<Email> getEmailByEmail(@PathVariable("email") String email) {
         return emailService.getEmail(email);
     }
 
     @PostMapping
     public void addEmail(@RequestBody Email email) {
-        emailService.addEmail(email.getEmail(), email.getZodiac());
+        emailService.addEmail(email.getEmail(), email.getZodiacSign());
     }
     
     @DeleteMapping("{email}")

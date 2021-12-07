@@ -30,10 +30,10 @@ public class EmailService{
         return emailDAO.selectEmailByEmail(email);
     }
 
-    public void addEmail (String email, String zodiac){
+    public void addEmail (String email, String zodiacSign){
 
         if (isValid(email)){
-            emailDAO.insertEmail(email, zodiac);
+            emailDAO.insertEmail(email, zodiacSign);
         } else {
             throw new Exceptions("Email is not valid");
         }

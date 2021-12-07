@@ -19,10 +19,10 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
     @Override
     public List<MonthlyHorrorScope> selectMonthlyHorrorScope() {
         String sql = """               
-                SELECT monthly_horrorscopes.*, desciptions.zodiacIcon, desciptions.zodiacIconDark,  zodiacBackground 
+                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground 
                 FROM monthly_horrorscopes 
                 LEFT JOIN descriptions 
-                ON monthly_horrorscopes.zodiacSign = desciptions.zodiacSign;
+                ON monthly_horrorscopes.zodiacSign = descriptions.zodiacSign;
                 """;
         return jdbcTemplate.query(sql, new MonthlyHorrorScopeRowMapper()) ;
     }
@@ -31,11 +31,11 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
     public Optional<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign) {
 
         String sql = """               
-                SELECT monthly_horrorscopes.*, desciptions.zodiacIcon, desciptions.zodiacIconDark,  zodiacBackground 
+                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground 
                 FROM monthly_horrorscopes 
                 LEFT JOIN descriptions 
-                ON monthly_horrorscopes.zodiacSign = desciptions.zodiacSign
-                WHERE monthly_horrorscopes.zodiacSign = zodiacSign;
+                ON monthly_horrorscopes.zodiacSign = descriptions.zodiacSign
+                WHERE monthly_horrorscopes.zodiacSign = ?;
                 """;
 
         return jdbcTemplate.query(sql, new MonthlyHorrorScopeRowMapper(), zodiacSign)
