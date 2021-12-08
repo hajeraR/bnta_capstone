@@ -36,7 +36,7 @@ class HorrorScopeDataAccessServiceTest {
         List<HorrorScope> actual = underTest.selectHorrorScopes();
         List<HorrorScope> expected = List.of(new HorrorScope("aries", "icon", "iconDark", "image", "imageDark", "background", "happy", "taurus", "gemini", "death", "yes", "no", "little", "over"));
 
-    assertThat(actual).isEqualTo(expected);
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
