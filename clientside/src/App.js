@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import ZodiacDescription from './pages/ZodiacDescription';
@@ -11,11 +11,11 @@ import { actionCreators} from './state/stateIndex';
 
 function App() {
 
-  const description = useSelector((state) => state.zodiacDescription);
-  const monthlyHorrorScope = useSelector((state) => state.monthlyHorrorScope)
-  const dispatch = useDispatch();
+  // const description = useSelector((state) => state.zodiacDescription);
+  // const monthlyHorrorScope = useSelector((state) => state.monthlyHorrorScope)
+  // const dispatch = useDispatch();
 
-  const { setDescription, setMonthlyHorrorScope} = bindActionCreators(actionCreators, dispatch);
+  // const { setDescription, setMonthlyHorrorScope} = bindActionCreators(actionCreators, dispatch);
 
   return (
     <BrowserRouter>
@@ -23,6 +23,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/zodiac/:sign" element={<ZodiacDescription />} />
       <Route path="/horrorscope/:month" element={<MonthlyHorrorScope />} />
+      <Route path="*" element={<Navigate to="/" />}/>
     </Routes>
     </BrowserRouter>
   );
