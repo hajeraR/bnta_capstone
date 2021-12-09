@@ -1,23 +1,28 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 // Bring in the asynchronous fetchPosts action
-import { fetchDescriptions } from '../actions/descriptionsActions';
+import { fetchDescriptions, descriptionsSelector} from '../actions/descriptionsActions';
 
-import { Description } from '../components/Descriptions'
+import { Description } from '../components/Description'
 
 
-const DescriptionsPage = ({ dispatch, loading, descriptions, hasErrors }) => {
+const DescriptionsPage = () => {
+  const dispatch = useDispatch();
+  const  { loading, descriptions, hasErrors } = useSelector(descriptionsSelector)
     useEffect(() => {
       dispatch(fetchDescriptions())
     }, [dispatch])
 
 // Show loading, error, or success state
-const renderDescriptions = () => {
+  const renderDescriptions = () => {
     if (loading) return <p>Loading descriptions...</p>
     if (hasErrors) return <p>Unable to display descriptions.</p>
-    return descriptions.map((description) => <Description key={descriptions.id} description={description} />)
+    console.log(descriptions[0]);
+    return descriptions.map((description) => {return(<Description key={descriptions.id} description={description} />)})
   }
   
     return (
@@ -26,15 +31,16 @@ const renderDescriptions = () => {
         {renderDescriptions()}
       </section>
     )
-  }
+}
   
 
 
 // Map Redux state to React component props
-const mapStateToProps = (state) => ({
-    loading: state.descriptions.loading,
-    descriptions: state.descriptions.descriptions,
-    hasErrors: state.descriptions.hasErrors,
-  })
-  // Connect Redux to React
-  export default connect(mapStateToProps)(DescriptionsPage)
+// const mapStateToProps = (state) => ({
+//     loading: state.descriptions.loading,
+//     descriptions: state.descriptions.descriptions,
+//     hasErrors: state.descriptions.hasErrors,
+//   })
+//   // Connect Redux to React
+//   export default connect(mapStateToProps)(DescriptionsPage)
+export default DescriptionsPage;
