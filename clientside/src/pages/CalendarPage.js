@@ -12,12 +12,20 @@ import { Calendar } from '../components/Calendar'
 
 const CalendarPage = () => {
   const [chosenZodiac, setChosenZodiac] = useState("Virgo");
+  const [shownMonth, setShownMonth] = useState("");
+  const [calendarMonth, setCalendarMonth] = useState([]);
 
   const dispatch = useDispatch();
-  const  { loading, calendars, hasErrors } = useSelector(calendarsSelector)
+  const  { loading, calendars, hasErrors } = useSelector(calendarsSelector);
     useEffect(() => {
       dispatch(fetchCalendars())
     }, [dispatch])
+
+  useEffect(() => {
+    if (shownMonth != ""){
+      setCalendarMonth([...calendars.filter(calendar => calendar.zodiacSign===chosenZodiac && calendar.month===shownMonth)])
+    }
+  }, [shownMonth] )
 
   
 
@@ -40,14 +48,12 @@ const CalendarPage = () => {
     setChosenZodiac(zodiac);
   }
 
-  const renderButtons = () => {
-    if (loading) return <p>Loading buttons...</p>
-    if (hasErrors) return <p>Unable to display buttons.</p>
-    return (calendars.map((calendar) => {
-      return(
-        <button onClick={chooseZodiac(calendar.zodiacSign)}>{calendar.zodiacSign}</button>
-      )
-    }))
+  const chooseMonth = (month) => {
+    setShownMonth(month);
+  }
+
+  const closeMonth = () => {
+    setShownMonth("");
   }
 
  
@@ -69,7 +75,22 @@ const CalendarPage = () => {
           <button onClick={() => chooseZodiac("Libra")}>Libra</button>
         </div>
         <h1>Calendar</h1>
-        {renderCalendar()}
+        <div className="monthButtons">
+          <button onClick={() => chooseMonth("January")}>January</button>
+          <button onClick={() => chooseMonth("February")}>February</button>
+          <button onClick={() => chooseMonth("March")}>March</button>
+          <button onClick={() => chooseMonth("April")}>April</button>
+          <button onClick={() => chooseMonth("May")}>May</button>
+          <button onClick={() => chooseMonth("June")}>June</button>
+          <button onClick={() => chooseMonth("July")}>July</button>
+          <button onClick={() => chooseMonth("August")}>August</button>
+          <button onClick={() => chooseMonth("September")}>September</button>
+          <button onClick={() => chooseMonth("October")}>October</button>
+          <button onClick={() => chooseMonth("November")}>November</button>
+          <button onClick={() => chooseMonth("December")}>December</button>
+        </div>
+        <h1>{calendarMonth.horrorscope}</h1>
+        <Calendar chooseMonth={chooseMonth} closeMonth={closeMonth} calendar={calendarMonth}/>
       </section>
     )
 }
