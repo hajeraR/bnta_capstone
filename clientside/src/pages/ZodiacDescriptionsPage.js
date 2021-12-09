@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/description.css';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,7 +28,6 @@ const DescriptionsPage = () => {
   
     return (
       <section>
-        <h1>Descriptions</h1>
         {renderDescriptions()}
       </section>
     )

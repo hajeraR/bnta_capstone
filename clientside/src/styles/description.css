@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+body {
+    background: black;
+}
+
+.bannerPlaceholder{
+    width: 100%;
+    height: 100px;
+    background: lightgrey;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.zodiac_sign h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 10vw;
+    text-align: center;
+    color: lightgrey;
+    text-shadow: 5px 5px 14px #FF0000;
+}
+
+.zodiac_sign:hover h1 {
+    text-shadow: 5px 5px 14px #b3b0b0;
+    transition: 0.5s;
+
+}
+ 
+p {
+    color: white;
+}
+
+
+.moon{
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 5px 16px white;
+  
+}
+    
+.moon:hover{
+  background-color: #00afec;
+  box-shadow: inset -12px 5px 0 20px transparent;
+  border-radius: .3rem;
+  transition: .25s;
+  background-color: transparent;
+    border-radius: 50%;
+    box-shadow: inset -12px 5px 0 3px white;
+    box-shadow: 5px 5px 16px white;
+}
+
+.zodiac_negative_match {
+    position: relative;
+    overflow-wrap: break-word;
+    
+}
+
+
