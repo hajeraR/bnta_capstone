@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react'
 
- const Description = ({description}) => (
-    <article>
-        <h2>descriptions</h2>
-    </article>
+export const Description = ({ description }) => (
+  <article className="post-excerpt">
+    <h2>{description.zodiacSign}</h2>
+    
+  </article>
 )
-
-export default Description;
