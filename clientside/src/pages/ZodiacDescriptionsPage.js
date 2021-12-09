@@ -35,12 +35,4 @@ const DescriptionsPage = () => {
   
 
 
-// Map Redux state to React component props
-// const mapStateToProps = (state) => ({
-//     loading: state.descriptions.loading,
-//     descriptions: state.descriptions.descriptions,
-//     hasErrors: state.descriptions.hasErrors,
-//   })
-//   // Connect Redux to React
-//   export default connect(mapStateToProps)(DescriptionsPage)
 export default DescriptionsPage;
