@@ -19,7 +19,7 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
     @Override
     public List<MonthlyHorrorScope> selectMonthlyHorrorScope() {
         String sql = """               
-                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground 
+                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground, zodiacImage, zodiacImageDark
                 FROM monthly_horrorscopes 
                 LEFT JOIN descriptions 
                 ON monthly_horrorscopes.zodiacSign = descriptions.zodiacSign;
@@ -31,7 +31,7 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
     public Optional<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign) {
 
         String sql = """               
-                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground 
+                SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground, zodiacImage, zodiacImageDark
                 FROM monthly_horrorscopes 
                 LEFT JOIN descriptions 
                 ON monthly_horrorscopes.zodiacSign = descriptions.zodiacSign
