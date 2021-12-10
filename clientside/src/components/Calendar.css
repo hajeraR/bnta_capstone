@@ -16,10 +16,36 @@
   background: #fff;
   color: #000;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   position: relative;
   z-index: 10;
   border-radius: 10px;
+  align-items: center;
 
   z-index: 5;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    opacity: 0.3;
+    background-color: transparent;
+    border: none;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+.close-icon{
+    font-size: 2em;
 }
