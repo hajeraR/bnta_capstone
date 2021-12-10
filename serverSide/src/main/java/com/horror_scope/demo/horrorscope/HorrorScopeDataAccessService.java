@@ -27,7 +27,7 @@ public class HorrorScopeDataAccessService implements HorrorScopeDAO{
      public Optional<HorrorScope> selectHorrorScopeByZodiacSign(String zodiacSign) {
 
         String sql = """
-                SELECT * FROM descriptions WHERE zodiacSign = ?;
+                SELECT * FROM descriptions WHERE lower(zodiacSign) = ?;
                 """;
 
         return jdbcTemplate.query(sql, new HorrorScopeRowMapper(), zodiacSign)

@@ -17,14 +17,15 @@ export const getDescriptions = () => ({
 
   export const descriptionsSelector = (state) => state.descriptions;
 
-  export function fetchDescriptions() {
+  export function fetchDescriptions(sign) {
     return async (dispatch) => {
       dispatch(getDescriptions())
   
       try {
-        const response = await fetch('http://localhost:8080/api/v1/horrorScope')
+        const response = await fetch(`http://localhost:8080/api/v1/horrorScope/${sign}`)
         const data = await response.json()
         console.log("try");
+        console.log(data)
   
         dispatch(getDescriptionsSuccess(data))
       } catch (error) {
