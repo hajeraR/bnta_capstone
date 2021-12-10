@@ -38,10 +38,16 @@ p {
   display: block;
   width: 200px;
   height: 200px;
-  background-color: white;
+  background-color: rgb(207, 204, 204);
   border-radius: 50%;
-  box-shadow: 5px 5px 16px white;
+  box-shadow: 5px 5px 16px white, inset 0 20px 30px 30px rgb(255, 255, 255), inset 30px 0 40px 70px  rgb(231, 230, 230);
   
+}
+
+.moon p {
+    display: none;
+    margin-left: 5%;
+    padding-top: 30%;
 }
     
 .moon:hover{
@@ -55,10 +61,9 @@ p {
     box-shadow: 5px 5px 16px white;
 }
 
-.zodiac_negative_match {
-    position: relative;
-    overflow-wrap: break-word;
-    
+.moon:hover p {
+    display: block;
 }
+
 
 

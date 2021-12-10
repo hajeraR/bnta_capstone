@@ -14,23 +14,20 @@ import { Description } from '../components/Description'
 
 const DescriptionsPage = () => {
 
-  const [zodiacSignName, setZodiacSignName] = useState("Virgo");
-
+  // const [zodiacSignName, setZodiacSignName] = useState("Virgo");
   const { zodiacSign }  = useParams();
 
- 
 
   const dispatch = useDispatch();
   const  { loading, descriptions, hasErrors } = useSelector(descriptionsSelector)
     useEffect(() => {
-      dispatch(fetchDescriptions(zodiacSignName))
+      dispatch(fetchDescriptions(zodiacSign))
     }, [dispatch])
 
 // Show loading, error, or success state
   const renderDescriptions = () => {
     if (loading) return <p>Loading descriptions...</p>
     if (hasErrors) return <p>Unable to display descriptions.</p>
-    
       if(descriptions.length){
 
       
