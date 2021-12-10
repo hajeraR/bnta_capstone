@@ -27,22 +27,8 @@ const CalendarPage = () => {
     }
   }, [shownMonth] )
 
-  
-
-// Show loading, error, or success state
-  const renderCalendar = () => {
-    if (loading) return <p>Loading calendar...</p>;
-    if (hasErrors) return <p>Unable to display calendar.</p>;
-    return (
-      calendars.filter(calendar => calendar.zodiacSign===chosenZodiac).map((calendar) => {
-          return (
-            <Calendar key={calendar.id} calendar={calendar} />
-          )
-        
-      }))
-    
-    }
-  
+ 
+   
  const chooseZodiac = (zodiac) => {
    console.log("click: ", zodiac);
     setChosenZodiac(zodiac);
@@ -50,10 +36,6 @@ const CalendarPage = () => {
 
   const chooseMonth = (month) => {
     setShownMonth(month);
-  }
-
-  const closeMonth = () => {
-    setShownMonth("");
   }
 
  
@@ -89,8 +71,10 @@ const CalendarPage = () => {
           <button onClick={() => chooseMonth("November")}>November</button>
           <button onClick={() => chooseMonth("December")}>December</button>
         </div>
-        <h1>{calendarMonth.horrorscope}</h1>
-        <Calendar chooseMonth={chooseMonth} closeMonth={closeMonth} calendar={calendarMonth}/>
+        {calendarMonth.length > 0 ? 
+        <Calendar chooseMonth={chooseMonth} setShownMonth={setShownMonth} setCalendarMonth={setCalendarMonth} calendar={calendarMonth}/>
+        :
+        <></>}
       </section>
     )
 }
