@@ -43,9 +43,12 @@ const DescriptionsPage = () => {
 
 
     return (
-      <section>
+      <body id="description_page">
+        <section>
         {renderDescriptions()}
       </section>
+      </body>
+      
     )
 }
   

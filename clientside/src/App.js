@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage'
 import ZodiacDescriptionsPage from './pages/ZodiacDescriptionsPage'
 
 import React from 'react'
+import HorrorPage from './pages/HorrorPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Route exact path="/" element={<HomePage/>} />
       <Route exact path="/descriptions/:zodiacSign" element={<ZodiacDescriptionsPage/>} />
       <Route exact path="/calendar" element={<CalendarPage/>} />
+      <Route exact path="/horrorPage" element={<HorrorPage/>} />
       {/* <Redirect to="/" /> */}
       <Route path="*" element={<Navigate to="/" />}/>
     </Routes>

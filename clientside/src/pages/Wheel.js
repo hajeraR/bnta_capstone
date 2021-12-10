@@ -8,7 +8,7 @@ class Wheel extends React.Component {
         super(props);
 
         this.state = {
-            radius: 150,
+            radius: 200,
             cards: [],
             theta: 0.0,
             snap_point: { x: null, y: null },
@@ -30,15 +30,17 @@ class Wheel extends React.Component {
 
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
-                //<Card radius={this.state.radius} theta={(Math.PI / 4) * i} center={center_of_wheel} key={`card_${i}`} pic={`../assets/cuteZodiacs${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} />
-                 <Card radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />
+                 <Card radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./cuteZodiacs/${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} />
             );
         }
+        // pic={`https://picsum.photos/500/500`}
+        // pic={`../assets/cuteZodiacs/${i}-cuteZodiac.PNG`
 
         this.setState({ cards: temp_cards });
     }
 
     handle_scroll = event => {
+        event.preventDefault()
         if (this.state.snap_in_progress && !this.state.loaded) {
             return;
         } else {
@@ -190,5 +192,3 @@ const styles = {
 export default Wheel;
 
 
-// pic={`https://picsum.photos/500/500`}
-// pic={`../assets/cuteZodiacs/${i}-cuteZodiac.PNG`

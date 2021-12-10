@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles/description.css"
 
  export const Description = ({description}) => (
 
-    <div>
+    <div className="zodiac_description">
        <div className="bannerPlaceholder">Banner Placeholder</div>
        <div className="zodiac_sign">
         <h1>{description.zodiacSign}</h1>

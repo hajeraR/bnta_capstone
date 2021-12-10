@@ -42,6 +42,7 @@ const CalendarPage = () => {
  
   
     return (
+      <body id="firstBody">
       <section class="wrapper">
         <div id="stars"></div>
         <div id="stars2"></div>
@@ -82,6 +83,7 @@ const CalendarPage = () => {
         :
         <></>}
       </section>
+      </body>
     )
 }
   

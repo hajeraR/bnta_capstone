@@ -49,7 +49,7 @@ const styles = {
         left: '50%',
         top: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: 'blue'
+        // backgroundColor: 'blue'
     },
     image: {
         width: '100%',
