@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchCalendars, calendarsSelector} from '../actions/calendarActions';
 
 import { Calendar } from '../components/Calendar'
+import './CalendarPage.css';
 
 
 const CalendarPage = () => {
@@ -41,7 +42,10 @@ const CalendarPage = () => {
  
   
     return (
-      <section>
+      <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
         <div className="zodiacButtons">
           <button onClick={() => chooseZodiac("Virgo")}>Virgo</button>
           <button onClick={() => chooseZodiac("Aquarius")}>Aquarius</button>
@@ -58,18 +62,20 @@ const CalendarPage = () => {
         </div>
         <h1>Calendar</h1>
         <div className="monthButtons">
-          <button onClick={() => chooseMonth("January")}>January</button>
-          <button onClick={() => chooseMonth("February")}>February</button>
-          <button onClick={() => chooseMonth("March")}>March</button>
-          <button onClick={() => chooseMonth("April")}>April</button>
-          <button onClick={() => chooseMonth("May")}>May</button>
-          <button onClick={() => chooseMonth("June")}>June</button>
-          <button onClick={() => chooseMonth("July")}>July</button>
-          <button onClick={() => chooseMonth("August")}>August</button>
-          <button onClick={() => chooseMonth("September")}>September</button>
-          <button onClick={() => chooseMonth("October")}>October</button>
-          <button onClick={() => chooseMonth("November")}>November</button>
-          <button onClick={() => chooseMonth("December")}>December</button>
+          <button onClick={() => chooseMonth("January")} className="button-month">
+            January
+          </button>
+          <button onClick={() => chooseMonth("February")} className="button-month">February</button>
+          <button onClick={() => chooseMonth("March")} className="button-month">March</button>
+          <button onClick={() => chooseMonth("April")} className="button-month">April</button>
+          <button onClick={() => chooseMonth("May")} className="button-month">May</button>
+          <button onClick={() => chooseMonth("June")} className="button-month">June</button>
+          <button onClick={() => chooseMonth("July")} className="button-month">July</button>
+          <button onClick={() => chooseMonth("August")} className="button-month">August</button>
+          <button onClick={() => chooseMonth("September")} className="button-month">September</button>
+          <button onClick={() => chooseMonth("October")} className="button-month">October</button>
+          <button onClick={() => chooseMonth("November")} className="button-month">November</button>
+          <button onClick={() => chooseMonth("December")} className="button-month">December</button>
         </div>
         {calendarMonth.length > 0 ? 
         <Calendar chooseMonth={chooseMonth} setShownMonth={setShownMonth} setCalendarMonth={setCalendarMonth} calendar={calendarMonth}/>
