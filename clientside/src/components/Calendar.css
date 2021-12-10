@@ -1,0 +1,86 @@
+.background{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.modal-wrapper{
+    width: 800px;
+  height: 500px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: rgb(241, 146, 194);
+  color: #000;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 
+  "figure info"
+  "horrorscope horrorscope";
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  align-items: center;
+
+  z-index: 5;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    opacity: 0.3;
+    background-color: transparent;
+    border: none;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+.close-icon{
+    font-size: 2em;
+}
+
+figure{
+  grid-area: figure;
+  height: 210px;
+  width: 210px;
+  margin: 0;
+  margin-left: 3em;
+  margin-top: 3em;
+}
+img{
+  grid-area: figure;
+  border-radius: 50%;
+  height: 210px;
+  width:210px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.zodiac-info{
+  grid-area: info;
+}
+.horrorscope{
+  grid-area: horrorscope;
+  margin-left:  7em;
+  margin-right: 7em;
+  text-align: center;
+}
+
