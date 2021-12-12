@@ -1,0 +1,16 @@
+#horror-page-body{
+    background-color: black;
+    height: 100vh;
+
+}
+
+.horror-zodiacs{
+    transform:scale(1, 1);
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.horror-zodiacs:hover {
+    transform:scale(1.2, 1.2);
+    opacity: 1;
+}

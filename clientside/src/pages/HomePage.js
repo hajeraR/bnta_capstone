@@ -1,41 +1,37 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Wheel from './Wheel';
+import CuteWheel from './CuteWheel'
 import './HomePage.css'
+// import magicCircle from '../assets/cuteBackground/magic-circle.png'
 
 
-   
+
 
 const HomePage = () => (
   <body id="home-page-body">
-  <section>
-    {/* <h1>Horo-Scopes</h1>
-    <p>This is the HomePage.</p> */}
-    <Wheel/>
+    <section class="wrapper">
 
-   
-  
-    <Link to="/horrorPage"  className="button">
-      View mainpage
-    </Link>
+      <h1 className="title neonText" ><span>Horo</span>Scopes</h1>
 
-    
-    {/* <Link to="/calendar" className="calendar-link">View Monthly Calendar</Link>
-    <Link to={{ pathname: `/descriptions/virgo`}}>
-      <button value="Virgo" >virgo</button>
-    </Link>
-    <Link to={{ pathname: `/descriptions/leo`}}>
-      <button value="leo" >leo</button>
-    </Link> */}
-    
-  </section>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      {/* <img className="magic-circle" src={magicCircle}/> */}
+      <CuteWheel />
+
+      <Link to="/horrorPage">
+        <button className="button-62" role="button">Register</button>
+      </Link>
+
+
+    </section>
   </body>
-  )
+)
 
 
- 
 
-  
+
+
 
 
 export default HomePage;

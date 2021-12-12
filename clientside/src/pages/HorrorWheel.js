@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from './Card.js';
+import HorrorCard from './HorrorCard.js';
 
 
 class Wheel extends React.Component {
@@ -8,7 +8,7 @@ class Wheel extends React.Component {
         super(props);
 
         this.state = {
-            radius: 200,
+            radius: 220,
             cards: [],
             theta: 0.0,
             snap_point: { x: null, y: null },
@@ -30,7 +30,7 @@ class Wheel extends React.Component {
 
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
-                 <Card radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./cuteZodiacs/${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} />
+                <HorrorCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./horrorZodiacs/${i}-horrorZodiac.PNG`} amLoaded={this.children_loaded} />
             );
         }
         // pic={`https://picsum.photos/500/500`}
@@ -41,7 +41,7 @@ class Wheel extends React.Component {
 
     handle_scroll = event => {
         event.preventDefault()
-        if (this.state.snap_in_progress && !this.state.loaded) {
+        if (!this.state.loaded && this.state.snap_in_progress) {
             return;
         } else {
             clearTimeout(this.anim_id);
@@ -54,7 +54,7 @@ class Wheel extends React.Component {
             // this.wheel.style.transform = `translate(-50%, -50%) rotate(${this.temp_theta + (event.deltaY * 0.5)}deg)`;
             // this.temp_theta += (event.deltaY * 0.5);
 
-            // rotate the cards in the opposite direction of the wheel to maintain equilibrium
+            // So the images don't spin with the wheel and go upside down. rotate the cards in the opposite direction of the wheel to maintain equilibrium
             for (let i = 0; i < this.wheel.children.length; i++) {
                 this.wheel.children[i].style.transitionDelay = '0.0s';
                 this.wheel.children[i].style.transitionDuration = '0.0s';
@@ -75,7 +75,7 @@ class Wheel extends React.Component {
                 children_loaded: prevState.children_loaded + 1
             }
         }, () => {
-            if (this.state.children_loaded === 8) {
+            if (this.state.children_loaded === 12) {
                 this.setState({
                     loaded: true,
                     snap_point: {
@@ -95,6 +95,7 @@ class Wheel extends React.Component {
         let snap_point_theta = Math.atan2(Math.abs(this.state.snap_point.y - center_of_wheel.y), Math.abs(this.state.snap_point.x - center_of_wheel.x));
         snap_point_theta = snap_point_theta * (180 / Math.PI);
 
+        //calculating shortest distance
         let shortest_distance =
             Math.pow(((this.wheel.children[3].getBoundingClientRect().x + 100) - this.state.snap_point.x), 2) +
             Math.pow(((this.wheel.children[3].getBoundingClientRect().y + 100) - this.state.snap_point.y), 2);
@@ -115,13 +116,14 @@ class Wheel extends React.Component {
             }
         }
 
-        // find angle between snap_point's theta and closest_card's theta
+        // find angle between snap_point's theta and closest_card's theta. Calculate theta between closest card and snap point.
         let closest_cards_x = closest_card.getBoundingClientRect().x + (closest_card.getBoundingClientRect().width / 2);
         let closest_cards_y = closest_card.getBoundingClientRect().y + (closest_card.getBoundingClientRect().height / 2);
 
         let closest_cards_theta = Math.atan2(Math.abs(closest_cards_y - center_of_wheel.y), Math.abs(closest_cards_x - center_of_wheel.x));
         closest_cards_theta = closest_cards_theta * (180 / Math.PI);
 
+        //simple subtraction by getting difference
         let theta_between = Math.abs(closest_cards_theta - snap_point_theta);
 
         // decide whether to make a positive or negative degree shift
@@ -135,7 +137,7 @@ class Wheel extends React.Component {
             theta_between = closest_cards_theta > snap_point_theta ? -1.0 * theta_between : theta_between;
         }
 
-        // rotate wheel towards snap point
+        // snap wheel towards snapping point
         this.wheel.style.transitionDelay = '0.1s';
         this.wheel.style.transitionDuration = '1.0s';
         this.wheel.style.transform = `translate(-50%, -50%) rotate(${this.state.theta + theta_between}deg)`;
@@ -145,13 +147,8 @@ class Wheel extends React.Component {
             this.wheel.children[i].style.transitionDelay = '0.1s';
             this.wheel.children[i].style.transitionDuration = '1.0s';
 
-            if (closest_card === this.wheel.children[i]) {
-                this.wheel.children[i].style.transform = `translate(-50%, -50%) rotate(${-1.0 * (this.state.theta + theta_between)}deg) scale(1.0)`;
-                this.wheel.children[i].style.zIndex = 100;
-            } else {
-                this.wheel.children[i].style.transform = `translate(-50%, -50%) rotate(${-1.0 * (this.state.theta + theta_between)}deg) scale(0.5)`;
-                this.wheel.children[i].style.zIndex = 1;
-            }
+            this.wheel.children[i].style.transform = `translate(-50%, -50%) rotate(${-1.0 * (this.state.theta + theta_between)}deg) scale(1.0)`;
+
         }
 
         setTimeout(() => {
@@ -161,7 +158,7 @@ class Wheel extends React.Component {
                     theta: prevState.theta + theta_between
                 }
             });
-        }, 200);
+        }, 150);
     }
 
     render() {
@@ -185,7 +182,8 @@ const styles = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: 'red'
+        // backgroundImage: './cuteBackground/magic-circle.png',
+        backgroundColor: 'red',
     }
 }
 
