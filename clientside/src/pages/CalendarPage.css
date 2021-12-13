@@ -53,8 +53,8 @@ input{
     color: white;
     text-align: center;
     font-family: 'Cinzel', serif;
-    font-size: 7vh;
-    width: 20%;
+    font-size: 6.5vh;
+    width: 25%;
 }
 .title-bar{
     display: flex;
