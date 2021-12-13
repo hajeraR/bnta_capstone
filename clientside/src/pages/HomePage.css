@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
 #home-page-body{
-    overflow:hidden;
+    /* overflow:hidden; */
     /* background-color: pink; */
+    overscroll-behavior: none; 
     height: 100vh;
     background: radial-gradient(ellipse at bottom, rgb(255, 218, 238) 0%,#ff7e9c 100%);
 }
@@ -304,7 +305,7 @@
 #stars:after {
     content: '';
     position: absolute;
-    top: 2000px;
+    top: 0px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -548,7 +549,7 @@
 #stars2:after {
     content: '';
     position: absolute;
-    top: 2000px;
+    top: 0px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -641,7 +642,7 @@
 #stars3:after {
     content: '';
     position: absolute;
-    top: 2000px;
+    top: 0px;
     width: 3px;
     height: 3px;
     background: transparent;
