@@ -37,13 +37,15 @@ p {
 
 
 .moon{
-  position: relative;
+  position: absolute;
   display: block;
   width: 200px;
   height: 200px;
   background-color: rgb(207, 204, 204);
   border-radius: 50%;
-  box-shadow: 5px 5px 16px white, inset 0 20px 30px 30px rgb(255, 255, 255), inset 30px 0 40px 70px  rgb(231, 230, 230);
+  box-shadow: 5px 5px 70px white, inset 0 20px 30px 30px rgb(255, 255, 255), inset 30px 0 40px 70px  rgb(211, 210, 210);
+  margin-top: -14%;
+  margin-left: 35%;
   
 }
 
@@ -57,7 +59,7 @@ p {
   background-color: #00afec;
   box-shadow: inset -12px 5px 0 20px transparent;
   border-radius: .3rem;
-  transition: .25s;
+  transition: 0.25s;
   background-color: transparent;
     border-radius: 50%;
     box-shadow: inset -12px 5px 0 3px white;
@@ -68,5 +70,37 @@ p {
     display: block;
 }
 
+.sun {
+    display:absolute;
+    border-radius:50%;
+    height:200px;
+    width:200px;
+    background:orange;
+    box-shadow: 0 0 10px orange,
+                  0 0 60px orange,
+                  0 0 200px yellow,
+                  inset 0 0 80px yellow;
+    z-index:12;
+    align:center;
+    z-index:-99;
+    margin-top: -14%;
+    margin-left: 55%;
+  }
 
+  .sun p {
+    display: none;
+    margin-left: 5%;
+    padding-top: 40%;
+}
 
+  .sun:hover{
+    background:transparent;
+    box-shadow: inset -12px 5px 0 3px rgb(156, 79, 79);
+    box-shadow: 5px 5px 16px rgb(231, 54, 54);
+    margin-top: -15%;
+    transition: 0.5s;
+  }
+
+  .sun:hover p {
+    display: block;
+}
