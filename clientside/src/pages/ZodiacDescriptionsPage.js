@@ -46,6 +46,9 @@ const DescriptionsPage = () => {
       <body id="description_page">
         <section>
         {renderDescriptions()}
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
       </section>
       </body>
       

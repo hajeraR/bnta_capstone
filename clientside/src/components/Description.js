@@ -1,30 +1,69 @@
 import React from "react";
 import "../styles/description.css"
+import { GiCrownedSkull, GiHeartWings, GiCash, GiBeamsAura, GiBriefcase } from "react-icons/gi";
+import { MdOutlineFamilyRestroom } from "react-icons/md";
 
  export const Description = ({description}) => (
 
     <div className="zodiac_description">
-       <div className="bannerPlaceholder">Banner Placeholder</div>
+       {/* <div className="bannerPlaceholder">Banner Placeholder</div> */}
        <div className="zodiac_sign">
         <h1>{description.zodiacSign}</h1>
         </div>
-        <p className="zodiac_personality">{description.personality}</p>
         <div className="zodiac_icon">icon</div>
         <div className="zodiac_icon_dark">iconDark</div>
         <div className="zodiac_image">image</div>
         <div className="zodiac_image_dark">imageDark</div>
         <div className="zodiac_background">background</div>
         <div className="moon">
-           <p className="zodiac_negative_match">{description.negativeMatch}</p>
+           <p id="positiveMatch"> positive match </p>
+           <p>{description.positiveMatch}</p>
          </div>
-         <div className="sun">
-        <p className="zodiac_positive_match">{description.positiveMatch}</p> 
+         <div className="redMoon">
+         <p id="negativeMatch"> negative match </p>
+        <p>{description.negativeMatch}</p> 
         </div> 
-        <p className="zodiac_death_prediction">{description.deathPrediction}</p>
-        <p className="zodiac_romance">{description.romance}</p>
-        <p className="zodiac_family">{description.family}</p>
-        <p className="zodiac_money">{description.money}</p>
-        <p className="zodiac_career">{description.career}</p>    
+
+        <div class="emptyLine"></div>
+
+        <div className="cardEffect">
+              <div id="cardStyle">
+              <div className="cardFlip">
+               <p id="outerCard"><GiBeamsAura /> Personality</p>
+               <p id="innerCard">{description.personality}</p>
+               </div>
+        </div>
+        <div id="cardStyle">
+        <div className="cardFlip">
+        <p id="outerCard"><MdOutlineFamilyRestroom/> Family</p>
+        <p  id="innerCard">{description.family}</p>
+        </div>
+        </div>
+        <div id="cardStyle">
+              <div className="cardFlip">
+              <p id="outerCard"><GiCrownedSkull /> Death</p>
+        <p id="innerCard">{description.deathPrediction}</p>
+        </div>
+        </div>
+        <div id="cardStyle">
+              <div className="cardFlip">
+              <p id="outerCard"><GiHeartWings/> Romance</p>
+        <p id="innerCard">{description.romance}</p>
+        </div>
+        </div>
+        <div id="cardStyle">
+        <div className="cardFlip">
+        <p id="outerCard"><GiCash /> Fortune</p>
+        <p id="innerCard">{description.money}</p>
+        </div>
+        </div>
+        <div id="cardStyle">
+        <div className="cardFlip">
+        <p id="outerCard"><GiBriefcase /> Career</p>
+        <p  id="innerCard">{description.career}</p>
+        </div>
+        </div>
+        </div>    
      </div>
     
     
