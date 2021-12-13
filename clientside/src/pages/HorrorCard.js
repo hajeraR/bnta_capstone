@@ -24,12 +24,12 @@ class Card extends React.Component {
         let coord = this.get_coords(this.props.theta, this.props.radius);
 
         return (
-            <div style={{
+            <div  style={{
                 ...styles.card,
                 left: `${this.props.center.x + coord.x}px`,
                 top: `${this.props.center.y - coord.y}px`
             }}>
-                <img alt="ok" src={this.props.pic} style={styles.image}/>
+                <img className="horror-zodiacs" alt="img" src={this.props.pic} style={styles.image} />
             </div>
         )
     }
@@ -49,7 +49,8 @@ const styles = {
         left: '50%',
         top: '50%',
         transform: 'translate(-50%, -50%)',
-        // backgroundColor: 'blue'
+        // backgroundColor: 'white',
+        
     },
     image: {
         width: '100%',
