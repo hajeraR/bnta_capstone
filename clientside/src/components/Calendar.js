@@ -14,13 +14,16 @@ export const Calendar = ({showMonth, setShownMonth, setCalendarMonth, calendar})
         <>
                 <section className="background" onClick={() => closeMonth()} ref={modalRef}>
                     <div className="modal-wrapper" showMonth={showMonth}>
-                        <figure>
+                        {/* <figure>
                             <img alt="A rather marvellous macaw, opening one of its wings to support the cause." src="https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                        </figure> */}
+                        <figure>
+                        <img src="./horrorZodiacs/0-horrorZodiac.PNG"/>
                         </figure>
-                        <div className="zodiac-info">
-                            <h2 zodiacSign="zodiac-sign">{calendar[0].zodiacSign}</h2>
-                            <h2>{calendar[0].month}</h2>
-                        </div>
+                        
+                        <h2 className="zodiac-sign">{calendar[0].zodiacSign}</h2>
+                        <h5 className="month">{calendar[0].month}</h5>
+                        
                         
                         <div className="horrorscope">
                         <h3>{calendar[0].horrorScope}</h3>

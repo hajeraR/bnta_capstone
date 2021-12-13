@@ -11,26 +11,31 @@
   justify-content: center;
   align-items: center;
   z-index: 5;
+  
 }
 
 .modal-wrapper{
-    width: 800px;
-  height: 500px;
+  width: 60%;
+  height: 80%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: rgb(241, 146, 194);
-  color: #000;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30%  10% 60%;
   grid-template-areas: 
-  "figure info"
-  "horrorscope horrorscope";
+  "title"
+  "month"
+  "horrorscope";
+  /* display: flex;
+  flex-direction: column; */
   position: relative;
   z-index: 10;
   border-radius: 10px;
   align-items: center;
-
+  font-family: 'Cinzel', serif;
+  font-size: 1.5em;
   z-index: 5;
+  border: 2px solid white;
 }
 
 .close {
@@ -57,30 +62,63 @@
   }
 .close-icon{
     font-size: 2em;
+    cursor: pointer;
+    color: white;
 }
 
 figure{
-  grid-area: figure;
-  height: 210px;
-  width: 210px;
-  margin: 0;
-  margin-left: 3em;
-  margin-top: 3em;
+  /* grid-area: figure info; */
+  /* height: 210px;
+  width: 210px; */
+  margin: auto; 
+  justify-self: center;
+  opacity: 40%;
+  position: absolute;
+  /* margin-left: 3em;
+  margin-top: 3em;  */
+  z-index: -1;
+  
+  
 }
 img{
-  grid-area: figure;
+  /* grid-area: figure;
   border-radius: 50%;
   height: 210px;
   width:210px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 .zodiac-info{
-  grid-area: info;
+  /* grid-area: info; */
 }
 .horrorscope{
   grid-area: horrorscope;
-  margin-left:  7em;
-  margin-right: 7em;
+  width: 90%;
   text-align: center;
+  margin: auto;
+  /* margin-top: 0; */
+  font-size: 2vw ;
+  line-height: 1.25em;
+}
+.zodiac-sign{
+  margin: auto;
+  grid-area: title;
+  margin-bottom: 0;
+  font-size: 4em;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.month{
+  margin: auto;
+  grid-area: month;
+  margin-bottom: 0;
 }
 
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60000, 0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #850000, 0 0 40px #850000, 0 0 50px #850000, 0 0 60px #850000, 0 0 70px #850000, 0 0 80px #850000;
+  }
+}
