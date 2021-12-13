@@ -23,9 +23,7 @@ class Card extends React.Component {
     render() {
         let coord = this.get_coords(this.props.theta, this.props.radius);
 
-
         //let astroSigns = ["virgo", "aquarius", "aries",  "sagittarius", "gemini","capricorn", "cancer", "taurus", "scorpio", "leo", "pisces", "libra"];
-
 
         return (
             <a  style={{

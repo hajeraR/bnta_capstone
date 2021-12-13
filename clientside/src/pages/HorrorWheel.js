@@ -29,7 +29,7 @@ class Wheel extends React.Component {
         }
         let temp_cards = [];
 
-         let astroSigns = ["virgo", "aquarius", "aries",  "sagittarius", "gemini","capricorn", "cancer", "taurus", "scorpio", "leo", "pisces", "libra"];
+         let astroSigns = ["capricorn", "sagittarius", "scorpio",  "libra", "virgo", "leo", "cancer", "gemini", "taurus", "aries", "pisces", "aquarius"];
 
 
         for (let i = 0; i < 12; i++) {
