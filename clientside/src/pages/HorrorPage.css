@@ -6,11 +6,12 @@
 
 .horror-zodiacs{
     transform:scale(1, 1);
-    transition: 0.3s;
+    transition: 0.5s;
     opacity: 0.6;
 }
 
 .horror-zodiacs:hover {
-    transform:scale(1.2, 1.2);
+    transform:scale(1.3, 1.3);
     opacity: 1;
+
 }
