@@ -47,11 +47,27 @@ const CalendarPage = () => {
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
+        <div className="title-bar">
         <div className="zodiacButtons">
-          <button onClick={() => chooseZodiac("Virgo")}>Virgo</button>
-          <button onClick={() => chooseZodiac("Aquarius")}>Aquarius</button>
-          <button onClick={() => chooseZodiac("Aries")}>Aries</button>
-          <button onClick={() => chooseZodiac("Sagittarius")}>Sagittarius</button>
+          <input type="image" src="./horrorZodiacs/0-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Capricorn")}/>
+          <input type="image" src="./horrorZodiacs/1-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Sagittarius")}/>
+          <input type="image" src="./horrorZodiacs/2-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Scorpio")}/>
+          <input type="image" src="./horrorZodiacs/3-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Libra")}/>
+          <input type="image" src="./horrorZodiacs/4-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Virgo")}/>
+          <input type="image" src="./horrorZodiacs/5-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Leo")}/>
+        </div>
+        <h1 id="zodiac-title" >{chosenZodiac}</h1>
+        <div className="zodiacButtons">
+          <input type="image" src="./horrorZodiacs/6-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Cancer")}/>
+          <input type="image" src="./horrorZodiacs/7-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Gemini")}/>
+          <input type="image" src="./horrorZodiacs/8-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Taurus")}/>
+          <input type="image" src="./horrorZodiacs/9-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aries")}/>
+          <input type="image" src="./horrorZodiacs/10-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Pisces")}/>
+          <input type="image" src="./horrorZodiacs/11-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aquarius")}/>
+          {/* <button onClick={() => chooseZodiac("Virgo")}>Virgo</button> */}
+          {/* <button onClick={() => chooseZodiac("Aquarius")}>Aquarius</button>
+          <button onClick={() => chooseZodiac("Aries")}>Aries</button> */}
+          {/* <button onClick={() => chooseZodiac("Sagittarius")}>Sagittarius</button>
           <button onClick={() => chooseZodiac("Gemini")}>Gemini</button>
           <button onClick={() => chooseZodiac("Capricorn")}>Capricorn</button>
           <button onClick={() => chooseZodiac("Cancer")}>Cancer</button>
@@ -59,9 +75,10 @@ const CalendarPage = () => {
           <button onClick={() => chooseZodiac("Scorpio")}>Scorpio</button>
           <button onClick={() => chooseZodiac("Leo")}>Leo</button>
           <button onClick={() => chooseZodiac("Pisces")}>Pisces</button>
-          <button onClick={() => chooseZodiac("Libra")}>Libra</button>
+          <button onClick={() => chooseZodiac("Libra")}>Libra</button> */}
         </div>
-        <h1>Calendar</h1>
+        </div>
+        
         <div className="monthButtons">
           <button onClick={() => chooseMonth("January")} className="button-month">
             January
