@@ -26,13 +26,13 @@ class HorrorScopeDataAccessServiceTest {
 
 
 
-//    @Test
-//    void selectHorrorScopes() {
-//        List<HorrorScope> actual = underTest.selectHorrorScopes();
-//        List<HorrorScope> expected = List.of(new HorrorScope("aries", "icon", "iconDark", "image", "imageDark", "background", "happy", "taurus", "gemini", "death", "yes", "no", "little", "over"));
-//
-//        assertThat(actual).isEqualTo(expected);
-//    }
+    @Test
+    void selectHorrorScopes() {
+        List<HorrorScope> actual = underTest.selectHorrorScopes();
+       // List<HorrorScope> expected = List.of(new HorrorScope("aries", "icon", "iconDark", "image", "imageDark", "background", "happy", "taurus", "gemini", "death", "yes", "no", "little", "over"));
+
+        assertThat(actual.size()).isEqualTo(2);
+    }
 
     @Test
     void selectHorrorScopeByZodiacSign() {
