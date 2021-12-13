@@ -68,10 +68,12 @@ p {
 
 .moon:hover p {
     display: block;
+    font-size: 90%;
+    
 }
 
 .sun {
-    display:absolute;
+    display: absolute;
     border-radius:50%;
     height:200px;
     width:200px;
@@ -93,14 +95,19 @@ p {
     padding-top: 40%;
 }
 
+
   .sun:hover{
     background:transparent;
     box-shadow: inset -12px 5px 0 3px rgb(156, 79, 79);
     box-shadow: 5px 5px 16px rgb(231, 54, 54);
     margin-top: -15%;
-    transition: 0.5s;
+      
+    
   }
 
   .sun:hover p {
     display: block;
+    font-size: 90%;
+    
 }
+
