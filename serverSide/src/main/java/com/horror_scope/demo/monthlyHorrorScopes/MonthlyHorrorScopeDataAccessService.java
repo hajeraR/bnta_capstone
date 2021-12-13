@@ -28,7 +28,7 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
     }
 
     @Override
-    public Optional<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign) {
+    public List<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign) {
 
         String sql = """               
                 SELECT monthly_horrorscopes.*, descriptions.zodiacIcon, descriptions.zodiacIconDark,  zodiacBackground, zodiacImage, zodiacImageDark
@@ -38,9 +38,10 @@ public class MonthlyHorrorScopeDataAccessService implements MonthlyHorrorScopeDA
                 WHERE monthly_horrorscopes.zodiacSign = ?;
                 """;
 
-        return jdbcTemplate.query(sql, new MonthlyHorrorScopeRowMapper(), zodiacSign)
-                .stream()
-                .findFirst();
+        return jdbcTemplate.query(sql, new MonthlyHorrorScopeRowMapper(), zodiacSign);
+//                .stream()
+                
+//                .findFirst();
 
     }
 }
