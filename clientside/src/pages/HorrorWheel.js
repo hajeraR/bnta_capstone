@@ -1,5 +1,4 @@
 import React from 'react'
-
 import HorrorCard from './HorrorCard.js';
 
 
@@ -21,6 +20,8 @@ class Wheel extends React.Component {
         this.anim_id = null;
     }
 
+    
+     
     componentDidMount() {
         let center_of_wheel = {
             x: parseFloat(this.wheel.style.width) / 2,
@@ -28,9 +29,12 @@ class Wheel extends React.Component {
         }
         let temp_cards = [];
 
+         let astroSigns = ["capricorn", "sagittarius", "scorpio",  "libra", "virgo", "leo", "cancer", "gemini", "taurus", "aries", "pisces", "aquarius"];
+
+
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
-                <HorrorCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./horrorZodiacs/${i}-horrorZodiac.PNG`} amLoaded={this.children_loaded} />
+                <HorrorCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./horrorZodiacSVG/${i}-horrorZodiac.svg`} amLoaded={this.children_loaded} astroSign={astroSigns[i]}/>
             );
         }
         // pic={`https://picsum.photos/500/500`}
@@ -68,6 +72,8 @@ class Wheel extends React.Component {
             }, 150);
         }
     }
+
+
 
     children_loaded = () => {
         this.setState(prevState => {
@@ -183,7 +189,7 @@ const styles = {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         // backgroundImage: './cuteBackground/magic-circle.png',
-        backgroundColor: 'red',
+        // backgroundColor: 'red',
     }
 }
 

@@ -6,6 +6,27 @@
     overscroll-behavior: none; 
     height: 100vh;
     background: radial-gradient(ellipse at bottom, rgb(255, 218, 238) 0%,#ff7e9c 100%);
+   
+}
+
+.flower-test {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+}
+
+.magic-circle {
+    max-width: 25rem;
+    /* filter: brightness(0.5) sepia(1) saturate(0%); */
+}
+
+.wheel-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    z-index: 2;
 }
 
 .cute-zodiacs {
@@ -40,6 +61,7 @@
     0 0 90px rgb(255, 177, 233),
     0 0 100px rgb(255, 173, 232),
     0 0 150px rgb(255, 171, 231);
+    
 }
 
 .title {
@@ -49,9 +71,13 @@
     text-align: center;
     font-size: 4rem;
     color: rgb(255, 255, 255);
+    /* position: absolute; */
+   
 }
+
+
   
-  span {
+  .cute-span {
     font-size: 4.2rem;
     color: rgb(255, 255, 255);
     animation: flicker 1.5s infinite alternate;     
@@ -79,7 +105,44 @@
     }    
   }
   
- 
+  .footer {
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+      height: 12vh;
+      align-items: center;
+      margin-top: 4rem;
+      
+  }
+
+
+
+.footer-knife {
+    width: 8rem;
+    margin-left: 1rem;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.footer-skull {
+    width: 10rem;
+    z-index: 1;
+    opacity: 0.5;
+    /* margin-right: 0.1rem; */
+}
+
+.footer-knife:hover { 
+    /* z-index: 2; */
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.footer-skull:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
   
   /* CSS */
 
@@ -108,6 +171,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
+    z-index: 2;
   }
   
   .button-62:not([disabled]):focus {

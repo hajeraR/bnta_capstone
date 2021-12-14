@@ -23,14 +23,17 @@ class Card extends React.Component {
     render() {
         let coord = this.get_coords(this.props.theta, this.props.radius);
 
+        //let astroSigns = ["virgo", "aquarius", "aries",  "sagittarius", "gemini","capricorn", "cancer", "taurus", "scorpio", "leo", "pisces", "libra"];
+
         return (
-            <div  style={{
+            <a  style={{
                 ...styles.card,
                 left: `${this.props.center.x + coord.x}px`,
                 top: `${this.props.center.y - coord.y}px`
-            }}>
+            }}
+            href={`http://localhost:3000/descriptions/${this.props.astroSign}`}>
                 <img className="horror-zodiacs" alt="img" src={this.props.pic} style={styles.image} />
-            </div>
+            </a>
         )
     }
 }
