@@ -49,21 +49,21 @@ const CalendarPage = () => {
         <div id="stars3"></div>
         <div className="title-bar">
         <div className="zodiacButtons">
-          <input type="image" src="./horrorZodiacs/0-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Capricorn")}/>
-          <input type="image" src="./horrorZodiacs/1-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Sagittarius")}/>
-          <input type="image" src="./horrorZodiacs/2-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Scorpio")}/>
-          <input type="image" src="./horrorZodiacs/3-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Libra")}/>
-          <input type="image" src="./horrorZodiacs/4-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Virgo")}/>
-          <input type="image" src="./horrorZodiacs/5-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Leo")}/>
+          <input type="image" src="./horrorZodiacs/0-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Capricorn")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/1-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Sagittarius")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/2-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Scorpio")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/3-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Libra")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/4-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Virgo")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/5-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Leo")} className="zodiac-icon-buttons"/>
         </div>
         <h1 id="zodiac-title" >{chosenZodiac}</h1>
         <div className="zodiacButtons">
-          <input type="image" src="./horrorZodiacs/6-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Cancer")}/>
-          <input type="image" src="./horrorZodiacs/7-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Gemini")}/>
-          <input type="image" src="./horrorZodiacs/8-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Taurus")}/>
-          <input type="image" src="./horrorZodiacs/9-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aries")}/>
-          <input type="image" src="./horrorZodiacs/10-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Pisces")}/>
-          <input type="image" src="./horrorZodiacs/11-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aquarius")}/>
+          <input type="image" src="./horrorZodiacs/6-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Cancer")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/7-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Gemini")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/8-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Taurus")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/9-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aries")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/10-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Pisces")} className="zodiac-icon-buttons"/>
+          <input type="image" src="./horrorZodiacs/11-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aquarius")} className="zodiac-icon-buttons"/>
           {/* <button onClick={() => chooseZodiac("Virgo")}>Virgo</button> */}
           {/* <button onClick={() => chooseZodiac("Aquarius")}>Aquarius</button>
           <button onClick={() => chooseZodiac("Aries")}>Aries</button> */}

@@ -11,34 +11,54 @@ import skull from '../cuteBackground/skull.png';
 
 
 
-const HomePage = () => (
-  <body id="home-page-body">
-    <section class="wrapper">
-    <img src={flowerFrame} className="flower-test"></img>
-    <div className="title-test">
-      <h1 className="title neonText" ><span className="cute-span">Horo</span>Scopes</h1>
- </div>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-      {/* <img className="magic-circle" src={magicCircle}/> */}
-      <div className="wheel-div">
-      <CuteWheel />
-      <img src={magicCircle} className="magic-circle" ></img>
-</div>
-<Link to="/horrorPage">
+const HomePage = () => {
+  const [clicked, setClicked] = useState(0);
+  const [showModal, setShowModal] = useState("");
+
+  const handleIconClick = () => {
+    if (clicked == 0) {
+      setShowModal("warning-1");
+    } else if (clicked == 1){
+      setShowModal("warning-2");
+    } else if (clicked == 2) {
+      setShowModal("warning-3");
+    }
+    setClicked(clicked + 1);
+    console.log(clicked);
+    
+}
+  return(
+    <body id="home-page-body">
+        <section class="wrapper">
+        <img src={flowerFrame} className="flower-test"></img>
+        <div className="title-test">
+          <h1 className="title neonText" ><span className="cute-span">Horo</span>Scopes</h1>
+    </div>
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+          {/* <img className="magic-circle" src={magicCircle}/> */}
+          <div className="wheel-div">
+          <CuteWheel clicked={clicked} handleIconClick={handleIconClick}/>
+          <img src={magicCircle} className="magic-circle" ></img>
+      </div>
+      <Link to="/horrorPage">
         <button className="button-62" role="button">Register</button>
       </Link>
 
-    </section>
-    <footer>
-    <div className="footer">
-  <img src={murderKnife} className="footer-image footer-knife"></img>
-      <img src={skull} className="footer-image footer-skull"></img>
-      </div>
-    </footer>
-  </body>
-)
+        </section>
+        <footer>
+        <div className="footer">
+      <img src={murderKnife} className="footer-image footer-knife"></img>
+          <img src={skull} className="footer-image footer-skull"></img>
+          </div>
+        </footer>
+      </body>
+  )
+
+}
+  
+
 
 
 

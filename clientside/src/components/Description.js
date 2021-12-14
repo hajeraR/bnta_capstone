@@ -10,7 +10,6 @@ import { useParams } from "react-router";
     const [deathShown, setDeathShown] = useState(false);
     const { zodiacSign }  = useParams();
 
-
     return (
 
     
