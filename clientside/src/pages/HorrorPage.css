@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 body {
     background-color: black;
@@ -32,9 +33,8 @@ body {
     /* opacity: 1; */
     /* filter: brightness(0.5) sepia(1) saturate(10000%); */
     /* filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(50%) sepia(70%) hue-rotate(-110deg) saturate(200%) contrast(0.7); */
-    /* filter: drop-shadow(0.5px 0.5px 0.5px rgb(211, 211, 211)); */
-    filter: drop-shadow(1px 1px 20px rgb(211, 211, 211));
-    
+    filter: drop-shadow(1px 1px 20px rgb(191, 176, 245));
+    /* color: rgb(191, 176, 245); */
 }
 
 /* .horror-wheel-div:hover  .horror-magic-circle{
@@ -82,13 +82,19 @@ body {
 }
 
 .form-container {
-	padding-top: 40vh;
+	padding-top: 43vh;
     height: 3rem;
 	display: flex;
-	/* flex-direction: column; */
-	/* align-items: center; */
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    /* display: grid; 
+    grid-template-columns: 20px 20px 20px 20px 20px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        " . test . test . "
+        " . . subscribe . . "; */
+    
 }
 
 .dare {
@@ -97,14 +103,19 @@ body {
 }
 
 .horror-input {
-	width: 15rem;
+	width: 12rem;
 	height: 1.5em;
-	border: none;
+	border: 1px solid white;
 	padding: 2px 5px 2px 5px;
 	font-family: "Metal Mania", cursive;
 	font-size: inherit;
-    margin: 0 2rem;
-    border-radius: 5px;
+    margin: 0 1rem;
+    border-radius: 10px;
+    text-align: center;
+    /* grid-area: test; */
+    background-color: black;
+    color: white;
+    
 }
 
 .horror-input:focus {
@@ -113,16 +124,19 @@ body {
 
 .horror-button {
 	display: block;
-	background-color: #660000;
+    background-color: rgb(191, 176, 245);
+	/* background-color: #660000; */
 	font-size: 15px;
 	cursor: pointer;
 	border: none;
-	padding: 0.5em 2em;
+	padding: 0.5em 1em;
 	/* margin-top: 1em; */
 	font-family: "Metal Mania", cursive;
 	letter-spacing: 3px;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    margin: 1.5rem 0 0 0.6rem;
     border-radius: 5px;
+    /* grid-area: subscribe; */
 }
 
 /* .button-dare-div {
@@ -134,9 +148,9 @@ body {
 
 .horror-button:hover,
 .horror-button:focus {
-	background-image: linear-gradient(to right, #ed0a0a 0%, #000 100%);
 	color: #fff;
-	outline: 1px solid #ff7518;
+    box-shadow: 1px 1px 15px rgb(191, 176, 245);
+	/* outline: 1px solid #ff7518; */
 }
 
 .horror-button:active {
@@ -201,15 +215,16 @@ body {
 .title-horror {
     margin-top: 2%;
     /* font-family: Nosifer; */
+    opacity: 0.9;
     font-weight: 300;
     text-align: center;
     font-size: 3rem;
     color: rgb(191, 176, 245);
     color: transparent;
     text-shadow: 0 0 5px rgba(184, 236, 255, 0.5);
-    /* font-family: 'Nosifer', sans-serif; */
+    font-family: 'Creepster', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-size: 4rem;
     /* position: absolute; */
     

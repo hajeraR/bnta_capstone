@@ -14,7 +14,8 @@ class Wheel extends React.Component {
             snap_point: { x: null, y: null },
             snap_in_progress: false,
             children_loaded: 0,
-            loaded: false
+            loaded: false,
+            clicked: 0
         }
 
         this.temp_theta = 0.0;
@@ -30,7 +31,7 @@ class Wheel extends React.Component {
 
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
-                <CuteCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./cuteZodiacs/${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} />
+                <CuteCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./cuteZodiacs/${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} clicked={this.props.clicked} handleIconClick={this.props.handleIconClick}/>
             );
         }
         // pic={`https://picsum.photos/500/500`}
@@ -161,9 +162,13 @@ class Wheel extends React.Component {
         }, 150);
     }
 
+    
+
+
+
     render() {
         return (
-            <div onWheel={this.handle_scroll} ref={ref_id => this.wheel = ref_id} style={styles.wheel}>
+            <div onWheel={this.handle_scroll} ref={ref_id => this.wheel = ref_id} style={styles.wheel} >
                 {this.state.cards}
             </div>
         )
