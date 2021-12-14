@@ -16,7 +16,7 @@ const HomePage = () => (
     <section class="wrapper">
     <img src={flowerFrame} className="flower-test"></img>
     <div className="title-test">
-      <h1 className="title neonText" ><span>Horo</span>Scopes</h1>
+      <h1 className="title neonText" ><span className="cute-span">Horo</span>Scopes</h1>
  </div>
       <div id="stars"></div>
       <div id="stars2"></div>

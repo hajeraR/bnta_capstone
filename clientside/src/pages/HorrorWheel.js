@@ -34,7 +34,7 @@ class Wheel extends React.Component {
 
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
-                <HorrorCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./horrorZodiacs/${i}-horrorZodiac.PNG`} amLoaded={this.children_loaded} astroSign={astroSigns[i]}/>
+                <HorrorCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./horrorZodiacSVG/${i}-horrorZodiac.svg`} amLoaded={this.children_loaded} astroSign={astroSigns[i]}/>
             );
         }
         // pic={`https://picsum.photos/500/500`}
@@ -189,7 +189,7 @@ const styles = {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         // backgroundImage: './cuteBackground/magic-circle.png',
-        backgroundColor: 'red',
+        // backgroundColor: 'red',
     }
 }
 
