@@ -67,8 +67,9 @@ class EmailServiceTest {
         when(emailDAO.insertEmail("example@email.com","pisces")).thenReturn(1);
 
 //         int actual = underTest.addEmail("example@email.com","pisces");
+        int actual = underTest.addEmail("example@email.com","pisces");
 
-         assertEquals(1, emailDAO.insertEmail("example@email.com","pisces"));
+         assertEquals(1, actual);
     }
 
 
@@ -86,17 +87,20 @@ class EmailServiceTest {
 
     @Test
     void deleteEmail() {
-        Email email = new Email(1,"email@email.com", "Virgo");
 
+       //given
+        Email email = new Email(1,"email@email.com", "Virgo");
+        emailDAO.selectEmailByEmail("email@email.com");
         List<Email> eList = List.of(email);
+
+
+        //when
+        when(emailDAO.selectEmailByEmail("email@email.com")).thenReturn(Optional.of(email));
+        when(emailDAO.deleteEmail("email@email.com")).thenReturn(1);
 
         assertThat(eList.get(0)).isNotNull();
 
-        when(emailDAO.deleteEmail("email@email.com")).thenReturn(1);
-        assertThat(emailDAO.deleteEmail("email@email.com")).isEqualTo(1);
-
-
-
+        assertThat(underTest.deleteEmail("email@email.com")).isEqualTo(1);
     }
 
     @Test

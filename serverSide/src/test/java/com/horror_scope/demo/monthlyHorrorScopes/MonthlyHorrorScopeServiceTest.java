@@ -43,24 +43,26 @@ class MonthlyHorrorScopeServiceTest {
         MonthlyHorrorScope monthlyHorrorScope = new MonthlyHorrorScope(1, "aries", "jan", "life", "icon", "dark icon", "image", "dark image", "background");
         List<MonthlyHorrorScope> mhs = List.of(monthlyHorrorScope);
 
-        when(monthlyHorrorScopeDAO.selectMonthlyHorrorScopeByZodiacSign("aries")).thenReturn(Optional.ofNullable(mhs.get(0)));
+        when(monthlyHorrorScopeDAO.selectMonthlyHorrorScopeByZodiacSign("aries")).thenReturn(mhs);
 
-        MonthlyHorrorScope actual = underTest.getMonthlyHorrorScope("aries");
+        List<MonthlyHorrorScope> actual = underTest.getMonthlyHorrorScope("aries");
 
         //then
-        assertThat(actual).isEqualTo(mhs.get(0));
+        assertThat(actual.size()).isEqualTo(1);
 
     }
 
     @Test
     void shouldThrowErrorIfZodiacDoesnotExist(){
-        MonthlyHorrorScope monthlyHorrorScope = new MonthlyHorrorScope(1, "aries", "jan", "life", "icon", "dark icon", "image", "dark image", "background");
-        List<MonthlyHorrorScope> mhs = List.of(monthlyHorrorScope);
 
-        when(monthlyHorrorScopeDAO.selectMonthlyHorrorScopeByZodiacSign("aries")).thenReturn(Optional.ofNullable(mhs.get(0)));
+        Throwable exception = assertThrows(Exceptions.class, () -> underTest.getMonthlyHorrorScope("pisces"));
 
-        assertThatThrownBy(() -> underTest.getMonthlyHorrorScope("pisces"))
-                .isInstanceOf(Exceptions.class)
-                .hasMessageContaining("Monthly Horrorscope with zodiac sign %s not found", "pisces");
+
+        assertEquals(String.format("Monthly Horrorscope with zodiac sign %s not found", "pisces"), exception.getMessage());
+
+
     }
 }
+
+
+

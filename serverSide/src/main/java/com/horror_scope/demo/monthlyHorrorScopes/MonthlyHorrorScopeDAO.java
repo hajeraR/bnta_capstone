@@ -10,6 +10,6 @@ public interface MonthlyHorrorScopeDAO {
     List<MonthlyHorrorScope> selectMonthlyHorrorScope();
     //    int insertRecipe(Recipe recipe);
 //    int deleteRecipe(int id);
-    Optional<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign);
+    List<MonthlyHorrorScope> selectMonthlyHorrorScopeByZodiacSign(String zodiacSign);
 //    int updateRecipe( Recipe recipe, Integer id);
 }

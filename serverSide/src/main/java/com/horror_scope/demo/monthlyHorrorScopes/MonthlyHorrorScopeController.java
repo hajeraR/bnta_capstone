@@ -27,7 +27,7 @@ public class MonthlyHorrorScopeController {
     }
 
     @GetMapping("{zodiacSign}")
-    public MonthlyHorrorScope getMonthlyHorrorScopeByZodiacSign(@PathVariable("zodiacSign") String zodiacSign) {
+    public List<MonthlyHorrorScope> getMonthlyHorrorScopeByZodiacSign(@PathVariable("zodiacSign") String zodiacSign) {
         return monthlyHorrorScopeService.getMonthlyHorrorScope(zodiacSign);
     }
 }
