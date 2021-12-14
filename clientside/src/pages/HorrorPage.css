@@ -3,43 +3,208 @@
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
 
 #horror-page-body{
-    background-color: black;
+    background-color: #000;
+    background-image: url(../horrorBackground/grey.png);
     height: 100vh;
     overscroll-behavior: none;
     padding: 0.5%;
     padding-bottom: -2%;
     margin-bottom: -5%;
     margin-top: -1%;
+
 }
 
 .horror-zodiacs{
     transform:scale(1, 1);
     transition: 0.5s;
     /* opacity: 0.6; */
-    /* color: tomato; */
-    
-    
+    /* color: tomato; */   
+    /* filter: brightness(0.25) sepia(1) saturate(1000%); */
+    /* filter: drop-shadow(1px 1px 20px rgb(211, 211, 211)); */
 }
+
 
 .horror-zodiacs:hover {
     transform:scale(1.3, 1.3);
     /* opacity: 1; */
-    filter: brightness(0.5) sepia(1) saturate(10000%);
-
+    /* filter: brightness(0.5) sepia(1) saturate(10000%); */
+    /* filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(50%) sepia(70%) hue-rotate(-110deg) saturate(200%) contrast(0.7); */
+    /* filter: drop-shadow(0.5px 0.5px 0.5px rgb(211, 211, 211)); */
+    filter: drop-shadow(1px 1px 20px rgb(211, 211, 211));
+    
 }
 
+/* .horror-wheel-div:hover  .horror-magic-circle{
+    filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(200%) sepia(70%) hue-rotate(-110deg) saturate(200%) contrast(0.7);
 
+} */
+
+.horror-wheel-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    /* z-index: 5; */
+}
+
+.horror-magic-circle{
+    position: relative;
+    max-width: 23rem;
+    opacity: 0.6;
+    /* z-index: 0; */
+    filter: grayscale(100%) brightness(150%) saturate(2000%);
+    pointer-events: none;
+}
+
+.horror-background {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    margin-top: -60%;
+   
+}
+
+.spooky-submit-component {
+	margin: 0;
+	/* background: #000; */
+	font-size: 20px;
+	font-family: "Metal Mania", cursive;
+	letter-spacing: 2px;
+	color: #fff;
+    margin-top: -12%;
+    /* margin-left: 50%; */
+}
+
+.form-container {
+	padding-top: 40vh;
+    height: 3rem;
+	display: flex;
+	/* flex-direction: column; */
+	/* align-items: center; */
+    justify-content: center;
+    align-items: center;
+}
+
+.dare {
+	font-size: 12px;
+	margin-top: 0.5em;
+}
+
+.horror-input {
+	width: 15rem;
+	height: 1.5em;
+	border: none;
+	padding: 2px 5px 2px 5px;
+	font-family: "Metal Mania", cursive;
+	font-size: inherit;
+    margin: 0 2rem;
+    border-radius: 5px;
+}
+
+.horror-input:focus {
+	outline: none;
+}
+
+.horror-button {
+	display: block;
+	background-color: #660000;
+	font-size: 15px;
+	cursor: pointer;
+	border: none;
+	padding: 0.5em 2em;
+	/* margin-top: 1em; */
+	font-family: "Metal Mania", cursive;
+	letter-spacing: 3px;
+    margin-left: 2rem;
+    border-radius: 5px;
+}
+
+/* .button-dare-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.horror-button:hover,
+.horror-button:focus {
+	background-image: linear-gradient(to right, #ed0a0a 0%, #000 100%);
+	color: #fff;
+	outline: 1px solid #ff7518;
+}
+
+.horror-button:active {
+	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+#submitted {
+	padding-top: 2em;
+	text-align: center;
+	display: none;
+}
+
+.horrorpage-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-items {
+    padding-top: 3rem;
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+}
 
 .title-horror {
-    margin-top: auto;
+    margin-top: 2%;
     /* font-family: Nosifer; */
     font-weight: 300;
     text-align: center;
-    font-size: 4rem;
-    color: rgb(150, 3, 37);
+    font-size: 3rem;
+    color: rgb(191, 176, 245);
     color: transparent;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-    font-family: 'Nosifer', sans-serif;
+    text-shadow: 0 0 5px rgba(184, 236, 255, 0.5);
+    /* font-family: 'Nosifer', sans-serif; */
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 4rem;
@@ -48,21 +213,21 @@
 }  
 
 .neonText2 {
-    color: rgb(248, 126, 126);
+    color: #fff;
     text-shadow:
-    0 0 7px rgb(247, 116, 116),
-    0 0 10px rgb(250, 78, 78),
-    0 0 21px rgb(255, 102, 102),
-    0 0 40px rgb(113, 5, 5),
-    0 0 80px rgb(126, 0, 55),
-    0 0 90px rgb(238, 0, 36),
-    0 0 100px rgb(99, 0, 10),
-    0 0 150px rgb(106, 0, 11);
-    
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 40px rgb(169, 138, 255),
+    0 0 80px rgb(213, 176, 255),
+    0 0 90px rgb(190, 177, 255),
+    0 0 100px rgb(200, 173, 255),
+    0 0 150px rgb(170, 142, 255);
+   
 }
 /* .horror-span {
     font-size: 4.2rem;
-    color: rgb(150, 3, 37);
+    color: rgb(182, 176, 250);
     animation: flicker2 1.5s infinite alternate;     
   }  */
 
@@ -87,19 +252,5 @@
     }    
   }   
 
-
-/* .title2 {
-  margin-top: 2%;
-  text-align: center;
-  color: transparent;
-  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-  font-family: 'Denk One', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 4rem;
-  /* position: absolute; */
-  /* left: 50%;
-  top: 35%;
-  margin-left: -180px; */
 
 

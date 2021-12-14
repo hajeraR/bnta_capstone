@@ -40,7 +40,7 @@ class Wheel extends React.Component {
     }
 
     handle_scroll = event => {
-        event.preventDefault()
+        // event.preventDefault()
         if (!this.state.loaded && this.state.snap_in_progress) {
             return;
         } else {
