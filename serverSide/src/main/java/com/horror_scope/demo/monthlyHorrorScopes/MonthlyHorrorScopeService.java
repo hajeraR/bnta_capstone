@@ -31,12 +31,6 @@ public class MonthlyHorrorScopeService {
 //                .orElseThrow(() -> new Exceptions(String.format("Monthly Horrorscope with zodiac sign %s not found", zodiacSign)));
 //    }
 
-//    s = s.filter(a -> {
-//        try {
-//            return a.isActive();
-//        } catch (IOException e) {
-//            throw new UncheckedIOException(e);
-//        }
-//    });
+
 
 }

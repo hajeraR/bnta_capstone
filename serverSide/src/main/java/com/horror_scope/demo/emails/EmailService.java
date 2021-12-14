@@ -30,23 +30,24 @@ public class EmailService{
         return emailDAO.selectEmailByEmail(email);
     }
 
-    public void addEmail (String email, String zodiacSign){
+    public int addEmail (String email, String zodiacSign){
 
         if (isValid(email)){
             emailDAO.insertEmail(email, zodiacSign);
         } else {
             throw new Exceptions("Email is not valid");
         }
-
+        return 1;
     }
 
-    public void deleteEmail (String email){
+    public int deleteEmail (String email){
         Optional<Email> checkEmail = emailDAO.selectEmailByEmail(email);
 
         if(checkEmail.isEmpty()){
             throw new Exceptions("Email not found");
         }
         emailDAO.deleteEmail(email);
+        return 1;
     }
 
 //    public EmailService() {

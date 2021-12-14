@@ -52,39 +52,17 @@ class MonthlyHorrorScopeServiceTest {
 
     }
 
-//    @Test
-//    void shouldThrowErrorIfZodiacDoesnotExist(){
-//        MonthlyHorrorScope monthlyHorrorScope = new MonthlyHorrorScope(1, "aries", "jan", "life", "icon", "dark icon", "image", "dark image", "background");
-//        List<MonthlyHorrorScope> mhs = List.of(monthlyHorrorScope);
-//
-//        when(monthlyHorrorScopeDAO.selectMonthlyHorrorScopeByZodiacSign("aries")).thenReturn(mhs);
-//
-//        Throwable exception = assertThrows(Exceptions.class, () -> monthlyHorrorScopeDAO.selectMonthlyHorrorScopeByZodiacSign("pisces"));
-//
-//        assertEquals("Monthly Horrorscope with zodiac sign %s not found", "pisces", exception.getMessage());
-//
-////        assertThrows(() -> underTest.getMonthlyHorrorScope("pisces"))
-////                .isInstanceOf(Exceptions.class)
-////                .hasMessageContaining("Monthly Horrorscope with zodiac sign %s not found", "pisces");
-//
-//    }
+    @Test
+    void shouldThrowErrorIfZodiacDoesnotExist(){
+
+        Throwable exception = assertThrows(Exceptions.class, () -> underTest.getMonthlyHorrorScope("pisces"));
+
+
+        assertEquals(String.format("Monthly Horrorscope with zodiac sign %s not found", "pisces"), exception.getMessage());
+
+
+    }
 }
 
-//    @Test
-//    public void testFooThrowsIndexOutOfBoundsException() {
-//        Throwable exception = assertThrows(IndexOutOfBoundsException.class, () -> foo.doStuff());
-//        assertEquals("expected messages", exception.getMessage());
-//    }
 
-//public class FooTest {
-//    @Rule
-//    public final ExpectedException exception = ExpectedException.none();
-//
-//    @Test
-//    public void doStuffThrowsIndexOutOfBoundsException() {
-//        Foo foo = new Foo();
-//
-//        exception.expect(IndexOutOfBoundsException.class);
-//        foo.doStuff();
-//    }
-//}
+
