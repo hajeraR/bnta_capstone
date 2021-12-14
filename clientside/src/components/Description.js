@@ -8,6 +8,7 @@ import { useParams } from "react-router";
  export const Description = ({description}) => {
 
     const [deathShown, setDeathShown] = useState(false);
+    const { zodiacSign }  = useParams();
 
     return (
 
@@ -15,7 +16,7 @@ import { useParams } from "react-router";
     <div className="zodiac_description">
        {/* <div className="bannerPlaceholder">Banner Placeholder</div> */}
        <div className="zodiac_sign">
-       <h1>description.zodiacSign}</h1>
+       {description.zodiacSign != null ? (<h1>{description.zodiacSign}</h1>) : (<h1>{zodiacSign}</h1>)}
         </div>
         <div className="zodiac_icon">icon</div>
         <div className="zodiac_icon_dark">iconDark</div>
@@ -24,11 +25,11 @@ import { useParams } from "react-router";
         <div className="zodiac_background">background</div>
         <div className="moon">
            <p id="positiveMatch"> positive match </p>
-           <p>{description.positiveMatch}</p>
+           {description.positiveMatch != null ? (<p>{description.positiveMatch}</p>) : (<p>Coming soon...</p>)}
          </div>
          <div className="redMoon">
          <p id="negativeMatch"> negative match </p>
-        <p>{description.negativeMatch}</p> 
+        {description.negativeMatch != null ? (<p>{description.negativeMatch}</p>) : (<p>Coming soon...</p>)}
         </div> 
 
         <div class="emptyLine"></div>
@@ -37,37 +38,37 @@ import { useParams } from "react-router";
               <div id="cardStyle">
               <div className="cardFlip">
                <p id="outerCard"><GiBeamsAura /> Personality</p>
-               <p id="innerCard">{description.personality}</p>
+               {description.personality != null ? (<p id="innerCard">{description.personality}</p>) : (<p id="innerCard">Coming soon...</p>)}
                </div>
         </div>
         <div id="cardStyle">
         <div className="cardFlip">
         <p id="outerCard"><MdOutlineFamilyRestroom/> Family</p>
-        <p  id="innerCard">{description.family}</p>
+        {description.family != null ? (<p id="innerCard">{description.family}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
               <div className="cardFlip">
               <p id="outerCard"><GiCrownedSkull /> Death</p>
-        <p id="innerCard">{description.deathPrediction}</p>
+        {description.death != null ? (<p id="innerCard">{description.death}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
               <div className="cardFlip">
               <p id="outerCard"><GiHeartWings/> Romance</p>
-        <p id="innerCard">{description.romance}</p>
+        {description.romance != null ? (<p id="innerCard">{description.romance}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
         <div className="cardFlip">
         <p id="outerCard"><GiCash /> Fortune</p>
-        <p id="innerCard">{description.money}</p>
+        {description.fortune != null ? (<p id="innerCard">{description.fortune}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
         <div className="cardFlip">
         <p id="outerCard"><GiBriefcase /> Career</p>
-        <p  id="innerCard">{description.career}</p>
+        {description.career != null ? (<p id="innerCard">{description.career}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         </div>    
