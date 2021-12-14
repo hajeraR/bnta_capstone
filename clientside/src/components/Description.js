@@ -50,7 +50,7 @@ import { useParams } from "react-router";
         <div id="cardStyle">
               <div className="cardFlip">
               <p id="outerCard"><GiCrownedSkull /> Death</p>
-        {description.death != null ? (<p id="innerCard">{description.death}</p>) : (<p id="innerCard">Coming soon...</p>)}
+        {description.deathPrediction != null ? (<p id="innerCard">{description.deathPrediction}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
@@ -62,7 +62,7 @@ import { useParams } from "react-router";
         <div id="cardStyle">
         <div className="cardFlip">
         <p id="outerCard"><GiCash /> Fortune</p>
-        {description.fortune != null ? (<p id="innerCard">{description.fortune}</p>) : (<p id="innerCard">Coming soon...</p>)}
+        {description.money != null ? (<p id="innerCard">{description.money}</p>) : (<p id="innerCard">Coming soon...</p>)}
         </div>
         </div>
         <div id="cardStyle">
