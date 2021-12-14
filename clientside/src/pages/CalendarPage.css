@@ -38,8 +38,8 @@
   10px 0 80px #0ff;         /* outer right cyan */
   /* background: linear-gradient(125deg, #232d3f 0%, #0e1219 100%); */
 }
-input{
-    height:5em;
+.zodiac-icon-buttons{
+    height:4.5em;
     width: auto;
 }
 .zodiacButtons{

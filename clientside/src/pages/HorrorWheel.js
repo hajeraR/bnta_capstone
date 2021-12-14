@@ -7,7 +7,7 @@ class Wheel extends React.Component {
         super(props);
 
         this.state = {
-            radius: 220,
+            radius: 210,
             cards: [],
             theta: 0.0,
             snap_point: { x: null, y: null },

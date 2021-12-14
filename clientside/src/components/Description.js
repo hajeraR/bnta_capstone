@@ -3,11 +3,11 @@ import { useState } from "react";
 import "../styles/description.css"
 import { GiCrownedSkull, GiHeartWings, GiCash, GiBeamsAura, GiBriefcase } from "react-icons/gi";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
+import { useParams } from "react-router";
 
  export const Description = ({description}) => {
 
     const [deathShown, setDeathShown] = useState(false);
-
 
     return (
 
@@ -15,7 +15,7 @@ import { MdOutlineFamilyRestroom } from "react-icons/md";
     <div className="zodiac_description">
        {/* <div className="bannerPlaceholder">Banner Placeholder</div> */}
        <div className="zodiac_sign">
-        <h1>{description.zodiacSign}</h1>
+       <h1>description.zodiacSign}</h1>
         </div>
         <div className="zodiac_icon">icon</div>
         <div className="zodiac_icon_dark">iconDark</div>
