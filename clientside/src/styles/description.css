@@ -2,12 +2,11 @@
 
 
 #description_page {
-    overflow: scroll;
     background: black; 
     
 }
 
-.bannerPlaceholder{
+/* .bannerPlaceholder{
     width: 100%;
     height: 100px;
     background: lightgrey;
@@ -15,7 +14,7 @@
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
-}
+} */
 
 .zodiac_sign h1 {
     font-family: 'Cinzel', serif;
@@ -23,36 +22,43 @@
     text-align: center;
     color: lightgrey;
     text-shadow: 5px 5px 14px #FF0000;
+    margin-top: 5%;
+    position: relative;
+    z-index: 5;
 }
 
 .zodiac_sign:hover h1 {
     text-shadow: 5px 5px 14px #b3b0b0;
-    transition: 0.5s;
+    transition: 1s;
 
 }
  
-p {
-    color: white;
-}
-
-
 .moon{
   position: absolute;
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: rgb(207, 204, 204);
   border-radius: 50%;
   box-shadow: 5px 5px 70px white, inset 0 20px 30px 30px rgb(255, 255, 255), inset 30px 0 40px 70px  rgb(211, 210, 210);
-  margin-top: -14%;
-  margin-left: 35%;
+  margin-top: -10%;
+  margin-left: 42.5%;
+  z-index: 5;
   
 }
+
 
 .moon p {
     display: none;
     margin-left: 5%;
-    padding-top: 30%;
+    padding-top: -30%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 5%;
+    color: white;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-size: 12px;
 }
     
 .moon:hover{
@@ -62,52 +68,252 @@ p {
   transition: 0.25s;
   background-color: transparent;
     border-radius: 50%;
-    box-shadow: inset -12px 5px 0 3px white;
+    box-shadow: inset -12px 5px 0 10px white;
     box-shadow: 5px 5px 16px white;
+    width: 200px;
+    height: 200px;
+    margin-left: 35%;
+    margin-top: -14%;
+    
 }
 
 .moon:hover p {
     display: block;
-    font-size: 90%;
     
 }
 
-.sun {
-    display: absolute;
+.moon:hover #positiveMatch {
+    margin-left: -170%;
+    margin-top: 20%;
+    text-shadow: 1px 1px 10px white;
+    white-space: nowrap;
+
+}
+
+.redMoon {
+    position: absolute;
     border-radius:50%;
-    height:200px;
-    width:200px;
-    background:orange;
-    box-shadow: 0 0 10px orange,
-                  0 0 60px orange,
-                  0 0 200px yellow,
-                  inset 0 0 80px yellow;
-    z-index:12;
+    height:100px;
+    width:100px;
+    background:rgb(77, 3, 3);
+    box-shadow: 5px 5px 80px rgb(255, 41, 41), inset 0 20px 30px 30px rgb(126, 12, 12), inset 30px 0 40px 70px  rgb(114, 22, 22);
     align:center;
-    z-index:-99;
-    margin-top: -14%;
-    margin-left: 55%;
+    margin-top: -10%;
+    margin-left: 51.5%;
+    z-index: 5;
   }
 
-  .sun p {
+  .redMoon p {
     display: none;
     margin-left: 5%;
-    padding-top: 40%;
+    padding-top: -30%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 5%;
+    color: white;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 
-  .sun:hover{
+  .redMoon:hover{
     background:transparent;
     box-shadow: inset -12px 5px 0 3px rgb(156, 79, 79);
     box-shadow: 5px 5px 16px rgb(231, 54, 54);
-    margin-top: -15%;
-      
-    
+    transition: 0.25s;
+    height:200px;
+    width:200px;
+    margin-top: -14%;
   }
 
-  .sun:hover p {
+  .redMoon:hover p {
     display: block;
-    font-size: 90%;
-    
 }
+
+.redMoon:hover #negativeMatch {
+    margin-left: 115%;
+    margin-top: 20%;
+    text-shadow: 1px 1px 10px white;
+    white-space: nowrap;
+}
+
+
+.cardEffect {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-rows: auto;
+    margin-left: 17%;
+    margin-top: 2%;
+    position: relative;
+    z-index: 5;
+}
+
+
+#cardStyle {
+    perspective: 1000px;
+}
+
+
+.cardFlip {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+#cardStyle:hover .cardFlip {
+    transform: rotateY(180deg);
+}
+
+#cardStyle:hover #innerCard {
+    display: block;
+}
+
+#innerCard {
+    height: 170px;
+    width: 200px;
+    border: 25px solid rgb(228, 228, 228);
+    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='rgb(228, 228, 228)' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='rgb(255, 255, 255)'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+    background: rgb(121, 16, 16);
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 16px rgb(121, 121, 121), -5px -5px 16px rgb(121, 121, 121), 5px -5px 16px rgb(121, 121, 121), -5px 5px 16px rgb(121, 121, 121);
+    transform: rotateY(180deg);
+    display: none;
+    margin-left: 29%;
+    margin-top: 8%;
+    padding-top: 30%;
+    font-family: 'Cinzel', serif;
+    font-size: 1vw;
+    text-align: center;
+    text-shadow: 0.1px 0.1px 1px white;
+}
+
+ #innerCard #outerCard {
+    backface-visibility: hidden;
+}
+
+#outerCard {
+    height: 190px;
+    width: 200px;
+    border: 25px solid rgb(173, 173, 173);
+    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='rgb(231, 231, 231)' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='rgb(252, 239, 239)'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+    background: rgb(61, 7, 7);
+    color: rgb(255, 255, 255);
+    /* box-shadow: 5px 5px 16px rgb(77, 77, 77); */
+    font-family: 'Cinzel', serif;
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 25%;
+    word-spacing: 100vw;
+}
+
+
+
+#cardStyle:hover #outerCard {
+    display: none;
+}
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+        height: 170vh;
+  }
+  
+  .twinkling{
+      width: 10000ox;
+      height: 170vh;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      
+      -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+      
+  }
+  
+  .clouds{
+      width: 10000px;
+      height: 170vh;
+      background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+  
+     -moz-animation:move-background 120s linear infinite;
+    -ms-animation:move-background 120s linear infinite;
+    -o-animation:move-background 120s linear infinite;
+    -webkit-animation:move-background 120s linear infinite;
+    animation:move-background 120s linear infinite;
+  }
+
+  /* .emptyLine {
+      background-color: #929292;
+      width: 500%;
+      height: 5px;
+      margin-top: -0.9%;
+      margin-left: -180%;
+      position: relative;
+      z-index: 4;
+      overflow-y: hidden;
+      box-shadow: 1px 1px 16px rgb(255, 255, 255);
+  }  */
 

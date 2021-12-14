@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+
 #horror-page-body{
     background-color: black;
     height: 100vh;
@@ -11,7 +15,7 @@
 .horror-zodiacs{
     transform:scale(1, 1);
     transition: 0.5s;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     /* color: tomato; */
     
     
@@ -19,7 +23,83 @@
 
 .horror-zodiacs:hover {
     transform:scale(1.3, 1.3);
-    opacity: 1;
+    /* opacity: 1; */
     filter: brightness(0.5) sepia(1) saturate(10000%);
 
 }
+
+
+
+.title-horror {
+    margin-top: auto;
+    /* font-family: Nosifer; */
+    font-weight: 300;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(150, 3, 37);
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    font-family: 'Nosifer', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    /* position: absolute; */
+    
+}  
+
+.neonText2 {
+    color: rgb(248, 126, 126);
+    text-shadow:
+    0 0 7px rgb(247, 116, 116),
+    0 0 10px rgb(250, 78, 78),
+    0 0 21px rgb(255, 102, 102),
+    0 0 40px rgb(113, 5, 5),
+    0 0 80px rgb(126, 0, 55),
+    0 0 90px rgb(238, 0, 36),
+    0 0 100px rgb(99, 0, 10),
+    0 0 150px rgb(106, 0, 11);
+    
+}
+/* .horror-span {
+    font-size: 4.2rem;
+    color: rgb(150, 3, 37);
+    animation: flicker2 1.5s infinite alternate;     
+  }  */
+
+  @keyframes flicker2 {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(138, 0, 21),
+        0 0 80px rgb(126, 0, 8),
+        0 0 90px rgb(255, 0, 17),
+        0 0 100px rgb(133, 0, 0),
+        0 0 150px rgb(160, 1, 30);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }   
+
+
+/* .title2 {
+  margin-top: 2%;
+  text-align: center;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  font-family: 'Denk One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  /* position: absolute; */
+  /* left: 50%;
+  top: 35%;
+  margin-left: -180px; */
+
+
