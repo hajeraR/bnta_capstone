@@ -22,7 +22,7 @@
     text-align: center;
     color: lightgrey;
     text-shadow: 5px 5px 14px #FF0000;
-    margin-top: 1%;
+    margin-top: 5%;
     position: relative;
     z-index: 5;
 }
@@ -44,7 +44,7 @@
   background-color: rgb(207, 204, 204);
   border-radius: 50%;
   box-shadow: 5px 5px 70px white, inset 0 20px 30px 30px rgb(255, 255, 255), inset 30px 0 40px 70px  rgb(211, 210, 210);
-  margin-top: -14%;
+  margin-top: -10%;
   margin-left: 42.5%;
   z-index: 5;
   
@@ -98,7 +98,7 @@
     background:rgb(77, 3, 3);
     box-shadow: 5px 5px 80px rgb(255, 41, 41), inset 0 20px 30px 30px rgb(126, 12, 12), inset 30px 0 40px 70px  rgb(114, 22, 22);
     align:center;
-    margin-top: -14%;
+    margin-top: -10%;
     margin-left: 51.5%;
     z-index: 5;
   }
@@ -264,12 +264,12 @@
       right: 0;
       display: block;
         z-index: 0;
-        height: 150vh;
+        height: 160vh;
   }
   
   .twinkling{
       width: 10000ox;
-      height: 150vh;
+      height: 160vh;
       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
       background-size: 1000px 1000px;
       position: absolute;
@@ -288,7 +288,7 @@
   
   .clouds{
       width: 10000px;
-      height: 50vh;
+      height: 160vh;
       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
       background-size: 1000px 1000px;
       position: absolute;
@@ -304,7 +304,7 @@
     animation:move-background 120s linear infinite;
   }
 
-  .emptyLine {
+  /* .emptyLine {
       background-color: #929292;
       width: 500%;
       height: 5px;
@@ -314,4 +314,4 @@
       z-index: 4;
       overflow-y: hidden;
       box-shadow: 1px 1px 16px rgb(255, 255, 255);
-  } 
+  }  */
