@@ -33,9 +33,6 @@
 
 }
  
-
-
-
 .moon{
   position: absolute;
   display: block;
@@ -82,8 +79,15 @@
 
 .moon:hover p {
     display: block;
-    font-size: 90%;
     
+}
+
+.moon:hover #positiveMatch {
+    margin-left: -170%;
+    margin-top: 20%;
+    text-shadow: 1px 1px 10px white;
+    white-space: nowrap;
+
 }
 
 .redMoon {
@@ -261,12 +265,12 @@
       right: 0;
       display: block;
         z-index: 0;
-        height: 160vh;
+        height: 170vh;
   }
   
   .twinkling{
       width: 10000ox;
-      height: 160vh;
+      height: 170vh;
       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
       background-size: 1000px 1000px;
       position: absolute;
@@ -285,7 +289,7 @@
   
   .clouds{
       width: 10000px;
-      height: 160vh;
+      height: 170vh;
       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
       background-size: 1000px 1000px;
       position: absolute;
