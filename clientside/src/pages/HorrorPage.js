@@ -19,58 +19,60 @@ import horrorBackground from '../horrorBackground/forest.png';
 
 
 const HorrorPage = () => (
+  <>
+  
+    <div className="horror-container">
+      <div class="bird-container bird-container--one">
+        <div class="bird bird--one"></div>
+      </div>
+
+      <div class="bird-container bird-container--two">
+        <div class="bird bird--two"></div>
+      </div>
+
+      <div class="bird-container bird-container--three">
+        <div class="bird bird--three"></div>
+      </div>
+
+      <div class="bird-container bird-container--four">
+        <div class="bird bird--four"></div>
+      </div>
+    </div>
+
   <body id="horror-page-body">
     <section className="horrorpage-header">
-    <Link to="/" className="homepage-link link-items">Return to Homepage</Link>
+      <Link to="/" className="homepage-link link-items">Return to Homepage</Link>
       <h1 className="title-horror neonText2"><span className="horror-span">Horror</span>Scopes</h1>
       <Link to="/calendar" className="calendar-link link-items">View Monthly Calendar</Link>
-      
-      
-      </section>
-
-      {/* <div className="horror-container">
-	
-	
-	<div class="bird-container bird-container--one">
-		<div class="bird bird--one"></div>
-	</div>
-	
-	<div class="bird-container bird-container--two">
-		<div class="bird bird--two"></div>
-	</div>
-	
-	<div class="bird-container bird-container--three">
-		<div class="bird bird--three"></div>
-	</div>
-	
-	<div class="bird-container bird-container--four">
-		<div class="bird bird--four"></div>
-	</div>
-	
-</div> */}
 
 
-      <section>
+
+    </section>
+
+
+
+    <section>
 
       <div className="horror-wheel-div">
-      <HorrorWheel/>
-      <img src={flameCircle} className="horror-magic-circle" ></img>
+        <HorrorWheel />
+        <img src={flameCircle} className="horror-magic-circle" ></img>
       </div>
-      
+
 
       {/* <Link to="/descriptions" className="button">
       View Descriptions
     </Link> */}
-      
-      </section>
+
+    </section>
     <section className="spooky-submit-component">
       <SpookySubmit />
     </section>
 
     {/* <img src={horrorBackground} className="horror-background" ></img> */}
 
-    
+
   </body>
+  </>
 )
 
 
