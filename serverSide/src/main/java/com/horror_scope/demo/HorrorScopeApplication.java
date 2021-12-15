@@ -18,14 +18,14 @@ public class HorrorScopeApplication {
 		SpringApplication.run(HorrorScopeApplication.class, args);
 	}
 
-	@EventListener(ApplicationReadyEvent.class)
-	public void triggerMail() throws MessagingException {
-
-//		service.sendSimpleEmail("horrorscopes226@gmail.com",
-//				"You're gonna die",
-//				"Zodiac Name"
-//				);
+//	@EventListener(ApplicationReadyEvent.class)
+//	public void triggerMail() throws MessagingException {
+//
+////		service.sendSimpleEmail("horrorscopes226@gmail.com",
+////				"You're gonna die",
+////				"Zodiac Name"
+////				);
 
 	}
 
-}
+
