@@ -17,6 +17,9 @@ public class Email {
         this.lastName = lastName;
     }
 
+    public Email() {
+    }
+
     public String getFirstName() {
         return firstName;
     }

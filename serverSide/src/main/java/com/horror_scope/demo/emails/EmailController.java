@@ -22,7 +22,7 @@ public class EmailController {
     private EmailSenderService service;
 
     @GetMapping
-    public List<Email> listEmail() {
+    public List<EmailToSend> listEmail() {
         return emailService.getEmail();
     }
 
@@ -33,9 +33,11 @@ public class EmailController {
 
     @PostMapping
     public void addEmail(@RequestBody Email email) {
+        System.out.println(email);
+        List<EmailToSend> EmailBody = emailService.getEmail();
         emailService.addEmail(email.getEmail(), email.getZodiacSign(), email.getFirstName(), email.getLastName());
         service.sendSimpleEmail(email.getEmail(),
-                "Good Morning " + email.getFirstName() + " " + email.getLastName() + ", \n \n Thank you for subscribing to our HorrorScope Service!" + "\n\n I see you are a " + email.getZodiacSign() + "...such a shame, so young and so much potential wasted." + "\n\n The spirits will welcome you with open arms." + "\n\n Stay Safe!" + "\n\nLove, \nThe HorrorScopes Team",
+                "Good Morning " + email.getFirstName() + " " + email.getLastName() + ", \n\nThank you for subscribing to our HorrorScope Service! \n\nI see you are a " + email.getZodiacSign() + "." + "\n\nAhh yes! The Orbs speak to us: " + EmailBody.get(EmailBody.size()-1).getPersonality()+"\n\nGreat adventures await you, have a look: \n" + EmailBody.get(EmailBody.size()-1).getHorrorscope() + "\n\nBattles won and lost, we see your end near: " + EmailBody.get(EmailBody.size()-1).getDeathprediction() + "\n\nWhat a shame, so young and so much potential wasted." + "\n\nThe spirits will welcome you with open arms."  +  "\n\nStay Safe!" + "\n\nLove, \nThe HorrorScopes Team \n",
                 "We're Watching You..."
         );
     }

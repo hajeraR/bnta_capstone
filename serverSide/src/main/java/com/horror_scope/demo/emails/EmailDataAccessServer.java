@@ -17,12 +17,17 @@ public class EmailDataAccessServer implements EmailDAO{
         this.jdbcTemplate = jdbcTemplate;
     }
 
+
     @Override
-    public List<Email> selectEmails() {
+    public List<EmailToSend> selectEmails() {
         String sql = """               
-                SELECT * FROM emails;
+                SELECT emails.zodiacSign, descriptions.personality, descriptions.deathpredictions, monthly_horrorscopes.months, monthly_horrorscopes.horrorscope 
+                FROM emails 
+                LEFT JOIN descriptions ON lower(emails.zodiacSign) = lower(descriptions.zodiacSign) 
+                LEFT JOIN monthly_horrorscopes ON lower(monthly_horrorscopes.zodiacSign) = lower(emails.zodiacSign)
+                WHERE lower(monthly_horrorscopes.months)='december'
                 """;
-        return jdbcTemplate.query(sql, new EmailRowMapper()) ;
+        return jdbcTemplate.query(sql, new EmailSentRowMapper());
     }
 
     @Override
@@ -36,11 +41,11 @@ public class EmailDataAccessServer implements EmailDAO{
     }
 
     @Override
-    public int insertEmail(String email, String zodiacSign) {
+    public int insertEmail(String email, String zodiacSign, String firstName, String lastName) {
         String sql = """
-                INSERT INTO emails (email, zodiacSign) VALUES (?,?);
+                INSERT INTO emails (email, zodiacSign, firstName, lastName) VALUES (?,?,?,?);
                 """;
-        return jdbcTemplate.update(sql, email, zodiacSign);
+        return jdbcTemplate.update(sql, email, zodiacSign, firstName, lastName);
     }
 
     @Override

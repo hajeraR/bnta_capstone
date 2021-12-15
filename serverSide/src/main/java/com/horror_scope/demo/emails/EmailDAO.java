@@ -5,8 +5,8 @@ import java.util.Optional;
 
 public interface EmailDAO {
 
-    List<Email> selectEmails();
+    List<EmailToSend> selectEmails();
     Optional<Email> selectEmailByEmail(String email);
-    int insertEmail(String email, String zodiacSign);
+    int insertEmail(String email, String zodiacSign, String firstName, String lastName);
     int deleteEmail(String email);
 }

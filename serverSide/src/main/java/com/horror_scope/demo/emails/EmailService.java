@@ -2,6 +2,8 @@ package com.horror_scope.demo.emails;
 
 import com.horror_scope.demo.exception.Exceptions;
 import com.horror_scope.demo.horrorscope.HorrorScope;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +14,8 @@ public class EmailService{
 
     private EmailDAO emailDAO;
 
-    public EmailService (EmailDAO emailDAO ){
+    @Autowired
+    public EmailService (@Qualifier("postgres") EmailDAO emailDAO ){
 
         this.emailDAO = emailDAO;
     }
@@ -28,7 +31,7 @@ public class EmailService{
         return result;
     }
 
-    public List<Email> getEmail() {
+    public List<EmailToSend> getEmail() {
         return emailDAO.selectEmails();
     }
 
@@ -39,7 +42,7 @@ public class EmailService{
     public int addEmail (String email, String zodiacSign, String firstName, String lastName) {
 
         if (isValid(email)) {
-            emailDAO.insertEmail(email, zodiacSign);
+            emailDAO.insertEmail(email, zodiacSign, firstName, lastName);
         } else {
             throw new Exceptions("Email is not valid");
         }
