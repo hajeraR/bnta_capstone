@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router";
+import { Link } from 'react-router-dom'
+import { AiOutlineHome } from "react-icons/ai";
 
 
 // Bring in the asynchronous fetchPosts action
@@ -45,6 +47,7 @@ const DescriptionsPage = () => {
     return (
       <body id="description_page">
         <section>
+        <Link to="/horrorPage" className="homeLink"><AiOutlineHome className="home-icon"/></Link>
         {renderDescriptions()}
         <div class="stars"></div>
         <div class="twinkling"></div>

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
 body {
     /* background-color: black; */
@@ -13,29 +14,37 @@ body {
     background-image: url(../horrorBackground/grey.png); 
     height: 100vh;
     overscroll-behavior: none;
+    /* background-size: cover; */
+    /* min-width: 1200px; */
     /* padding: 0.5%;
     padding-bottom: -2%;
     margin-bottom: -5%;
     margin-top: -1%; */
 }
 
+.small-horror-zodiacs {
+    display: none;
+}
+
 .horror-zodiacs{
     transform:scale(1, 1);
-    transition: 0.5s;
-    
+    /* transition: 0.5s; */
+   
     /* color: tomato; */   
     /* filter: brightness(0.25) sepia(1) saturate(1000%); */
-    /* filter: drop-shadow(1px 1px 20px rgb(211, 211, 211)); */
+    /* filter: drop-shadow(1px 1px 20px rgb(191, 176, 245)) brightness(80%); */
+    /* filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(50%) sepia(70%) hue-rotate(-110deg) saturate(200%) contrast(0.7); */
 }
 
 
 .horror-zodiacs:hover {
     transform:scale(1.3, 1.3);
-    
+    transition: 0.2s;
     /* opacity: 1; */
     /* filter: brightness(0.5) sepia(1) saturate(10000%); */
-    /* filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(50%) sepia(70%) hue-rotate(-110deg) saturate(200%) contrast(0.7); */
-    filter: drop-shadow(1px 1px 20px rgb(191, 176, 245));
+    /* filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) sepia(53%) saturate(2560%) hue-rotate(200deg) brightness(108%) contrast(92%); */
+    filter: drop-shadow(3px 3px 20px rgb(255, 255, 255)) grayscale(100%) brightness(70%) sepia(70%) hue-rotate(-125deg) saturate(180%) contrast(0.7);
+    /* filter: drop-shadow(1px 1px 20px rgb(191, 176, 245)) brightness(80%); */
     /* color: rgb(191, 176, 245); */
     /* fill: rgb(250, 221, 255); */
 }
@@ -51,7 +60,7 @@ body {
     justify-content: center;
     margin-top: 2rem;
     position: relative;
-    /* z-index: 5; */
+    z-index: 5;
 }
 
 .horror-magic-circle{
@@ -97,6 +106,8 @@ body {
     grid-template-areas: 
         " . test . test . "
         " . . subscribe . . "; */
+        position: relative;
+        z-index: 4;
     
 }
 
@@ -110,7 +121,7 @@ body {
 	height: 1.5em;
 	border: 1px solid white;
 	padding: 2px 5px 2px 5px;
-	font-family: "Metal Mania", cursive;
+	font-family: "Cinzel", cursive;
 	font-size: inherit;
     margin: 0 1rem;
     border-radius: 10px;
@@ -127,14 +138,15 @@ body {
 
 .horror-button {
 	display: block;
-    background-color: rgb(191, 176, 245);
+    /* background-color: rgb(191, 176, 245); */
+    background: rgb(224, 188, 248);
 	/* background-color: #660000; */
 	font-size: 15px;
 	cursor: pointer;
 	border: none;
 	padding: 0.5em 1em;
 	/* margin-top: 1em; */
-	font-family: "Metal Mania", cursive;
+	font-family: "Cinzel", cursive;
 	letter-spacing: 3px;
     /* margin-left: 2rem; */
     margin: 1.5rem 0 0 0.6rem;
@@ -205,19 +217,51 @@ body {
 
 .horrorpage-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+
 }
 
 .link-items {
-    padding-top: 3rem;
+    /* margin-top: 50%;
+    padding-top: 20%; */
     margin: 0 1rem;
     color: white;
     text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.25vw;
+    /* background: rgb(224, 188, 248); */
+    
+      border-radius: 50%;
+      height: 3vw;
+      width: 3vw;
+      text-align: center;
+      padding: 15%;
+      padding-bottom: 5%;
+      padding-top: 15%;
+      /* box-shadow: 1px 1px 50px rgb(224, 188, 248), -1px 1px 50px rgb(224, 188, 248), 1px -1px 50px rgb(224, 188, 248), -1px -1px 50px rgb(224, 188, 248); */
 }
 
+#navSymbol {
+    display: none;
+}
+
+.home-icon-container {
+    margin-top: -0.5%;
+    /* width: 10rem; */
+}
+
+.calendar-icon-container {
+margin-top: -0.5%
+
+}
+
+
 .title-horror {
-    margin-top: 0%;
-    margin-bottom: 4%;
+    margin: 0 0.8rem 4% 2rem;
+    /* margin-top: 0%;
+    margin-bottom: 4%; */
     /* opacity: 0.9; */
     font-weight: 300;
     text-align: center;
@@ -407,4 +451,177 @@ body {
     100% {
         transform: translateY(0vh) translateX(110vw) scale(0.45);
    }
+}
+
+.starsHorror {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       display: block;
+         z-index: 0;
+         height: 100vh;
+         display: none;
+   }
+   
+   .twinklingHorror{
+       width: 10000px;
+       height: 100vh;
+       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+       background-size: 1000px 1000px;
+       position: absolute;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       z-index: 2;
+       display: none;
+       
+       -moz-animation:move-background 70s linear infinite;
+     -ms-animation:move-background 70s linear infinite;
+     -o-animation:move-background 70s linear infinite;
+     -webkit-animation:move-background 70s linear infinite;
+     animation:move-background 70s linear infinite;
+       
+   }
+   
+   .cloudsHorror{
+       width: 10000px;
+       height: 100vh;
+       background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+       background-size: 1000px 1000px;
+       position: absolute;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       z-index: 3;
+       display: none;
+   
+      -moz-animation:move-background 150s linear infinite;
+     -ms-animation:move-background 150s linear infinite;
+     -o-animation:move-background 150s linear infinite;
+     -webkit-animation:move-background 150s linear infinite;
+     animation:move-background 150s linear infinite;
+   }
+
+@media screen and (max-width: 900px) {
+    #horror-page-body{
+        background-image: none;
+        background-color: black;
+    }
+
+    .starsHorror, .twinklingHorror, .cloudsHorror {
+        display: block;
+        height: 120vh;
+    }
+
+    .horror-zodiacs {
+        filter: drop-shadow(1px 1px 20px rgb(191, 176, 245)) brightness(80%);
+    }
+
+    /* .calendar-link {
+        margin-right: 0.5rem;
+        
+    } */
+
+    .link-items {
+        word-spacing: 5px;
+        text-align: center;
+        font-size: 2.5vw;
+        
+    }
+
+    .home-icon-container {
+        margin-top: 2.5%;
+        
+    }
+
+    .calendar-icon-container {
+    margin-top: 2.5%;
+    margin-left: 1%;
+    }
+
+    .horror-wheel-small {
+        display: none;
+    }
+
+   .horror-wheel-div{
+       margin-top: 10%;
+   }
+
+   .title-horror {
+       margin-top: 1rem;
+   }
+
+   #navSymbol {
+       display: block;
+       box-shadow: 1px 1px 50px rgb(224, 188, 248), -1px 1px 50px rgb(224, 188, 248), 1px -1px 50px rgb(224, 188, 248), -1px -1px 50px rgb(224, 188, 248);
+       border-radius: 50%;
+       background: rgb(224, 188, 248);
+       padding: 20%;
+    
+    }
+
+   #navWords{
+       display: none;
+   }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .starsHorror, .twinklingHorror, .cloudsHorror {
+        display: block;
+        height: 125vh;
+    }
+
+    .starsHorror {
+        width: 100vh;
+    }
+
+    .link-items {
+        font-size: 4vw;
+        
+    }
+
+    .home-icon-container {
+        margin-top: 4%;
+        margin-left: -2%;
+        margin-right: -4%;
+
+    }
+
+    .calendar-icon-container {
+        margin-top: 4%;
+        margin-left: -2%;
+
+    }
+
+    .horror-wheel-div{
+        margin-top: 15%;
+    }
+
+    .form-container {
+        margin-top: -20%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cloudsHorror {
+        display: none;
+    }
+
+    .horror-magic-circle {
+        max-width: 15rem;
+    }
+
+    .horror-wheel-div {
+        display: none;
+    }
+
+    .small-horror-zodiacs {
+        display: inline;
+       z-index: 6;
+    }
+
 }

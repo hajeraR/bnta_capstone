@@ -317,3 +317,269 @@
       box-shadow: 1px 1px 16px rgb(255, 255, 255);
   }  */
 
+  .homeLink {
+      color: white;
+      position: absolute;
+      z-index: 4;
+      font-size: 1.3vw;
+      font-family: 'Cinzel', serif;
+      text-shadow: 1px 1px 20px rgb(255, 255, 255);
+      text-decoration: none;
+      word-spacing: 100vw;
+      text-align: center;
+      margin-left: 1%;
+      margin-top: -3%;
+      background: rgb(117, 26, 26);
+      border-radius: 50%;
+      height: 3vw;
+      width: 3vw;
+      padding-top: 0.8%;
+      box-shadow: 1px 1px 30px rgb(136, 37, 37), -1px 1px 30px rgb(136, 37, 37), 1px -1px 30px rgb(136, 37, 37), -1px -1px 30px rgb(136, 37, 37);
+  }
+
+  
+@media screen and (max-width: 900px) {
+    .twinkling {
+        height: 215vh;
+    }
+
+    .stars {
+        height: 215vh;
+    }
+
+    .clouds{
+        height: 215vh;
+    }
+
+    .moon {
+        width: 80px; 
+        height: 80px;
+        margin-left: 40.5%;
+        margin-top: -15%;
+    }
+
+    .moon:hover {
+        margin-left: 28%;
+        margin-top: -18%;
+    }
+
+
+    .redMoon {
+        width: 80px; 
+        height: 80px;
+        margin-left: 52%;
+        margin-top: -15%;
+    }
+
+    .redMoon:hover {
+        margin-top: -18%;
+    }
+
+
+    .cardEffect {
+        margin-top: 4%;
+    }
+
+    #innerCard {
+    font-size: 1.7vw;
+    padding-top: 25%;
+    margin-top: 6%;
+    }
+
+    #outerCard {
+        font-size: 2.5vw;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .twinkling {
+        height: 210vh;
+    }
+
+    .stars {
+        height: 210vh;
+    }
+
+    .clouds{
+        height: 210vh;
+    }
+
+    .zodiac_sign h1 {
+        font-size: 18vw;
+    }
+
+    .moon {
+        
+        margin-left: 37%;
+        margin-top: -30%;
+    }
+
+    .moon:hover {
+        margin-left: 25%;
+        margin-top: -30%;
+        height:160px;
+        width:160px;
+    }
+    
+    .moon:hover #positiveMatch {
+        margin-top: 12%;
+    }
+
+    .redMoon {
+        margin-left: 54%;
+        margin-top: -30%;
+    }
+
+    .redMoon:hover {
+        margin-top: -30%;
+        margin-left: 50%;
+        height:160px;
+        width:160px;
+    }
+
+    .redMoon:hover #negativeMatch {
+        margin-left: 105%;
+        margin-top: 7%;
+    }
+    .cardEffect {
+        grid-template-columns: repeat(auto-fit, 270px);
+        margin-left: 7%;
+        margin-top: -5%;
+        
+    }
+
+    #innerCard {
+        margin-left:7%;
+        margin-top: 10%;
+        font-size: 2vw;
+        padding-top: 40%;
+    }
+
+    #outerCard {
+        font-size: 4.5vw;
+    }
+
+    .homeLink {
+        height: 5vw;
+        width: 5vw;
+        font-size: 2.5vw;
+        padding-top: 1%;
+        /* padding-right: -5%; */
+    }
+
+    
+}
+  
+
+
+  @media screen and (max-width: 320px) {
+      .twinkling {
+          height: 410vh;
+      }
+
+      .stars {
+          height: 410vh;
+      }
+
+      .clouds{
+          height: 410vh;
+      }
+
+      .homeLink {
+          width: 10vw;
+          height: 10vw;
+          font-size: 5vw;
+          margin-top: -15%;
+          margin-left: 2%;
+          padding-top: 2%;
+      }
+
+      /* .home-icon {
+          margin-top: 0.2rem;
+      } */
+
+      #description_page {
+          width: 100%;
+      }
+
+      .cardEffect {
+          margin-top: -14%;
+      }
+
+      #cardStyle {
+          /* margin-left: -5%; */
+          margin-top: 3rem;
+          margin-left: 1rem;
+         
+      }
+
+      #cardFlip {
+          /* margin-left: -5%; */
+          margin-left: 1rem;
+      }
+
+      #outerCard {
+          font-size: 8vw;
+          padding-top: 40%;
+      }
+
+
+      #innerCard {
+          font-size: 5vw;
+          margin-left:2%;
+      }
+
+      .moon-container {
+        margin-bottom: 2rem;
+      }
+
+      .moon {
+          width: 50px;
+          height: 50px;
+          margin-top: -45%;
+      }
+
+      .moon p {
+          font-size: 3vw;
+      }
+
+      .moon:hover {
+        margin-left: 50%;
+        height: 140px;
+        width: 140px;
+      }
+
+
+      .redMoon {
+          /* margin-top: 6rem;
+          margin-right: 3rem; */
+        margin-top: -45%;
+        width: 50px;
+        height: 50px;
+      }
+
+      .redMoon p {
+        padding-top: 0.5rem;
+        font-size: 3vw;
+      }
+
+      .redMoon:hover {
+          margin-left: 2rem;
+          height: 140px;
+          width: 140px;
+         
+      }
+
+
+      .zodiac_sign h1 {
+          font-size: 4rem;
+          margin-top: 20%;
+      }
+
+      .zodiac_sign {
+          margin-top: 2rem;
+      }
+
+      
+  }
