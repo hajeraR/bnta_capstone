@@ -1,8 +1,10 @@
 package com.horror_scope.demo.emails;
 
+import com.horror_scope.demo.horrorscope.HorrorScope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -14,6 +16,11 @@ public class EmailController {
     @Autowired
     public EmailController(EmailService emailService) {
         this.emailService = emailService;
+    }
+
+    @GetMapping
+    public List<EmailSent> listEmailSent() {
+        return emailService.getEmailSent();
     }
 
     @GetMapping("email={email}")

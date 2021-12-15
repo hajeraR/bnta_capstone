@@ -4,6 +4,7 @@ package com.horror_scope.demo.emails;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository("postgres")
@@ -12,6 +13,16 @@ public class EmailDataAccessServer implements EmailDAO{
 
     public EmailDataAccessServer(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Override
+    public List<EmailSent> selectEmailSent(){
+        String sql = """
+                SELECT descriptions.zodiacSign, descriptions.personality, descriptions.deathpredictions, monthly_horrorscopes.months, monthly_horrorscopes.horrorscope FROM emails LEFT JOIN descriptions 
+                ON emails.zodiacSign = descriptions.zodiacSign LEFT JOIN monthly_horrorscopes 
+                ON monthly_horrorscopes.zodiacSign = emails.zodiacSign
+                """;
+        return jdbcTemplate.query(sql, new EmailSentRowMapper());
     }
 
     @Override

@@ -1,8 +1,10 @@
 package com.horror_scope.demo.emails;
 
 import com.horror_scope.demo.exception.Exceptions;
+import com.horror_scope.demo.monthlyHorrorScopes.MonthlyHorrorScope;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,6 +27,11 @@ public class EmailService{
         }
         return result;
     }
+
+    public List<EmailSent> getEmailSent() {
+        return emailDAO.selectEmailSent();
+    }
+
 
     public Optional<Email> getEmail(String email) {
         return emailDAO.selectEmailByEmail(email);
