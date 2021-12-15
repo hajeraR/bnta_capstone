@@ -41,7 +41,7 @@ const handleSubmit = (e) => {
 		audio.play();
 		email.value="";
 		form.style.display = "block";
-        sendEmail();
+        // sendEmail();
 		console.log("email: ", email.value);
 	}
 };

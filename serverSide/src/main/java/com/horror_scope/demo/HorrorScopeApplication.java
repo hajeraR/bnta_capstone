@@ -21,10 +21,10 @@ public class HorrorScopeApplication {
 	@EventListener(ApplicationReadyEvent.class)
 	public void triggerMail() throws MessagingException {
 
-		service.sendSimpleEmail("horrorscopes226@gmail.com",
-				"You're gonna die",
-				"Zodiac Name"
-				);
+//		service.sendSimpleEmail("horrorscopes226@gmail.com",
+//				"You're gonna die",
+//				"Zodiac Name"
+//				);
 
 	}
 
