@@ -32,7 +32,7 @@
 
 .cute-zodiacs {
     transform:scale(1, 1);
-    transition: 0.3s;
+    transition: 0.6s;
     box-shadow:none;
 } 
 .cute-zodiacs:hover {
@@ -184,7 +184,7 @@
   }
 
   .show-modal{
-    top: 0;
+     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -196,16 +196,19 @@
     justify-content: center;
     align-items: center;
     z-index: 5;
-
-    will-change: transform, opacity;
-
-    transform: scale(1.15);
-
-  transition:
-    transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
-    opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-
     
+  }
+
+  .knife-modal{
+      background: rgb(0, 0, 0);
+  }
+
+  .run-modal{
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    width:70%;
   }
 
   .warning-box{
@@ -213,7 +216,246 @@
       font-size: larger;
   }
 
-      
+  .dare h1 {
+    color: red;
+    font-family: 'Nosifer', cursive;
+    font-size: 200px;
+    letter-spacing: 20px;
+    width: 100%;
+    }
+
+
+.dare {
+  background-color: transparent;
+  color: red;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.dare2 {
+  background-color:transparent;
+  height: 500px;
+  width: 100%;
+}
+.dare3 {
+    background-color:transparent;
+    height: 500px;
+    width: 100%;
+    grid-area: drop3;
+  }
+.droplets{
+    display: grid;
+    grid-template-columns: 43% 3% 54%;
+    grid-template-areas: "drop1 drop2 drop3";
+}
+
+.drop {
+  position: relative;
+    width: 20px;
+    height: 20px;
+  top: 145px;
+  margin: 0 auto;
+    background: red;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+  -moz-animation-name: drip;
+  -webkit-animation-name: drip;
+  animation-name: drip;
+  -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+  animation-timing-function: cubic-bezier(1,0,.91,.19);
+  -moz-animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 30px solid red;
+  top: -22px;
+  left: 0%;
+}
+
+.wave {
+  position: relative;
+  opacity: 0;
+  top: 110px;
+    width: 2px;
+    height: 1px;
+  border: red 7px solid;
+    -moz-border-radius: 300px / 150px;
+    -webkit-border-radius: 300px / 150px;
+    border-radius: 300px / 150px;
+  -moz-animation-name: ripple;
+  -webkit-animation-name: ripple;
+  animation-name: ripple;
+  -moz-animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -moz-animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  margin: 175px auto;
+}
+
+.wave:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: -5px;
+  left: -5px;
+    width: 2px;
+    height: 1px;
+  border: red 5px solid;
+    -moz-border-radius: 300px / 150px;
+    -webkit-border-radius: 300px / 150px;
+    border-radius: 300px / 150px;
+  -moz-animation-name: ripple-2;
+  -webkit-animation-name: ripple-2;
+  animation-name: ripple-2;
+  -moz-animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  margin: 175px auto;
+  margin-top: 0px;
+}
+.drop2 {
+    position: relative;
+      width: 15px;
+      height: 15px;
+    top: 145px;
+    margin: 0 auto;
+      background: red;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+    -moz-animation-name: drip;
+    -webkit-animation-name: drip;
+    animation-name: drip;
+    -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+    -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+    animation-timing-function: cubic-bezier(1,0,.91,.19);
+    -moz-animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  .drop2:before {
+    content: "";
+    position: absolute;
+    width: 0;
+      height: 0;
+      border-left: 7.5px solid transparent;
+      border-right: 7.5px solid transparent;
+      border-bottom: 30px solid red;
+    top: -22px;
+    left: 0%;
+  }
+  
+  .wave2 {
+    position: relative;
+    opacity: 0;
+    top: 110px;
+      width: 2px;
+      height: 1px;
+    border: red 7px solid;
+      -moz-border-radius: 300px / 150px;
+      -webkit-border-radius: 300px / 150px;
+      border-radius: 300px / 150px;
+    -moz-animation-name: ripple;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -moz-animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -moz-animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    margin: 175px auto;
+  }
+  
+  .wave:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: -5px;
+    left: -5px;
+      width: 2px;
+      height: 1px;
+    border: red 5px solid;
+      -moz-border-radius: 300px / 150px;
+      -webkit-border-radius: 300px / 150px;
+      border-radius: 300px / 150px;
+    -moz-animation-name: ripple-2;
+    -webkit-animation-name: ripple-2;
+    animation-name: ripple-2;
+    -moz-animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    margin: 175px auto;
+    margin-top: 0px;
+  }
+
+@keyframes ripple {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 600px;
+      height: 300px;
+      border-width: 1px;
+      top: -100px;
+      opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 200px;
+    height: 100px;
+    border-width: 1px;
+    top: 100px;
+    left: 200px;
+  }
+}
+
+@keyframes drip {
+    to {
+      top: 300px;
+    }
+}    
 
   @keyframes fadeToRed {
     0% {

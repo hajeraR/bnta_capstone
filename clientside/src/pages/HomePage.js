@@ -40,7 +40,7 @@ const HomePage = () => {
     
   }
   const handleKnifeClick = () => {
-    setShowModal4("show-modal");
+    setShowModal4("show-modal knife-modal");
   }
   const closeKnifeModal = () => {
     setShowModal4("close-modal");
@@ -85,9 +85,22 @@ const HomePage = () => {
         </div>
       </div>
       <div className={showModal4} onClick={() => closeKnifeModal()}>
-        <div className="ghost-modal">
-          <h2>RUN!</h2>
+        <div className="run-modal">
+        <section className="dare">
+          <h1> RUN </h1>
+        </section>
+        <section className="droplets">
+        <section className="dare2">
+            <div className="drop"></div>
+            <div className="wave"></div>
+        </section>
+        <section className="dare3">
+            <div className="drop2"></div>
+            <div className="wave2"></div>
+        </section> 
+        </section>
         </div>
+       
       </div>
       <Link to="/horrorPage">
         <button className="button-62" role="button">Register</button>
