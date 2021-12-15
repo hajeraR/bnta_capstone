@@ -64,7 +64,7 @@ class EmailServiceTest {
         Email email = new Email(1,"email@email.com", "Virgo", "Bob", "b");
 
         List<Email> eList = List.of(email);
-        when(emailDAO.insertEmail("example@email.com","pisces")).thenReturn(1);
+        when(emailDAO.insertEmail("example@email.com","pisces", "bob", "b")).thenReturn(1);
 
 //         int actual = underTest.addEmail("example@email.com","pisces");
         int actual = underTest.addEmail("example@email.com","pisces", "bob", "b");
@@ -78,7 +78,7 @@ class EmailServiceTest {
         Email email = new Email(1, "John", "Pisces", "bob", "b");
         List<Email> eList = List.of(email);
 
-        when(emailDAO.insertEmail("john", "Pisces")).thenReturn(1);
+        when(emailDAO.insertEmail("john", "Pisces", "bob", "b")).thenReturn(1);
 
         assertThatThrownBy(() -> underTest.addEmail("john", "Pisces", "bob", "b"))
             .isInstanceOf(Exceptions.class)
