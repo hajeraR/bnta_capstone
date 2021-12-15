@@ -183,6 +183,64 @@
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 202, 218, 0.5), .125rem .125rem 1rem rgba(255, 90, 148, 0.5);
   }
 
+  .show-modal{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+      width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+    will-change: transform, opacity;
+
+    transform: scale(1.15);
+
+  transition:
+    transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+    opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+    
+  }
+
+  .warning-box{
+      color: white;
+      font-size: larger;
+  }
+
+      
+
+  @keyframes fadeToRed {
+    0% {
+      background-color:rgba(black,.6);
+    }
+    100% {
+      background-color:rgba(red,.8);
+    }
+  }
+  
+  @keyframes slowFade {
+    0% {
+      opacity:1;
+    }
+    99.9% {
+      opacity:0;
+      transform:scale(1);
+    }
+    100% {
+      transform:scale(0);
+    }
+  }
+
+  .close-modal{
+      display: none;
+  }
+
 #stars {
     width: 1px;
     height: 1px;

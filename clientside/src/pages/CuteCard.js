@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 class Card extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class Card extends React.Component {
         let coord = this.get_coords(this.props.theta, this.props.radius);
 
         return (
-            this.props.clicked < 3 ?
+            // this.props.clicked < 3 ?
             <div  style={{
                 ...styles.card,
                 left: `${this.props.center.x + coord.x}px`,
@@ -33,16 +33,18 @@ class Card extends React.Component {
             }}>
                 <img className="cute-zodiacs" alt="img" src={this.props.pic} style={styles.image} onClick={() => this.props.handleIconClick()}/>
             </div>
-            :
-            <div  style={{
-                ...styles.card,
-                left: `${this.props.center.x + coord.x}px`,
-                top: `${this.props.center.y - coord.y}px`
-            }}>
-            <Link to="/horrorPage">
-                <img className="cute-zodiacs" alt="img" src={this.props.pic} style={styles.image} />
-            </Link>
-            </div>
+            // :
+            // <Redirect to="/horrorPage">
+            // <div  style={{
+            //     ...styles.card,
+            //     left: `${this.props.center.x + coord.x}px`,
+            //     top: `${this.props.center.y - coord.y}px`
+            // }}>
+            
+            //     <img className="cute-zodiacs" alt="img" src={this.props.pic} style={styles.image} />
+            
+            // </div>
+            // </Redirect>
             
         )
     }
