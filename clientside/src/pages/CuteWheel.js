@@ -14,8 +14,7 @@ class Wheel extends React.Component {
             snap_point: { x: null, y: null },
             snap_in_progress: false,
             children_loaded: 0,
-            loaded: false,
-            clicked: 0
+            loaded: false
         }
 
         this.temp_theta = 0.0;

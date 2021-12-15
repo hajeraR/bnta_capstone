@@ -31,7 +31,7 @@ class Card extends React.Component {
                 left: `${this.props.center.x + coord.x}px`,
                 top: `${this.props.center.y - coord.y}px`
             }}>
-                <img className="cute-zodiacs" alt="img" src={this.props.pic} style={styles.image} onClick={() => this.props.handleIconClick()}/>
+                <img className="cute-zodiacs" alt="img" src={this.props.pic} style={styles.image} onClick={() =>this.props.handleIconClick()}/>
             </div>
             :
             <div  style={{

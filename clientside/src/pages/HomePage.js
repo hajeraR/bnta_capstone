@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CuteWheel from './CuteWheel'
 import './HomePage.css'
@@ -7,13 +7,20 @@ import flowerFrame from '../cuteBackground/flower-frame.png';
 import magicCircle from '../cuteBackground/magic-circle.png';
 import murderKnife from '../cuteBackground/murder-knife.png';
 import skull from '../cuteBackground/skull.png';
+import { useDispatch } from "react-redux";
+import { useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import iconClicker from '../actions/iconClickAction.js';
 
 
 
 
 const HomePage = () => {
-  const [clicked, setClicked] = useState(0);
   const [showModal, setShowModal] = useState("");
+
+  const dispatch = useDispatch();
+  const { clicked } = useSelector((state) => state.clicked);
+  const { iconClicker } = bindActionCreators(iconClicker, dispatch);
 
   const handleIconClick = () => {
     if (clicked == 0) {
@@ -23,10 +30,11 @@ const HomePage = () => {
     } else if (clicked == 2) {
       setShowModal("warning-3");
     }
-    setClicked(clicked + 1);
+    iconClicker();
     console.log(clicked);
     
 }
+
   return(
     <body id="home-page-body">
         <section class="wrapper">
