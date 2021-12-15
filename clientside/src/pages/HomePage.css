@@ -748,3 +748,28 @@
         transform: translateY(-2000px);
     }
 }
+
+@media screen and (max-width: 900px) {
+    #home-page-body{
+        height: 110vh;
+        overflow: hidden;
+    }
+
+
+    .cute-zodiacs {
+        margin-top: 35%;
+    }
+
+    .button-62 {
+        margin-bottom: -5%;
+    }
+
+    .footer {
+        height: 18vh;
+    }
+
+    .flower-test {
+        height: 110vh;
+    }
+    
+}
