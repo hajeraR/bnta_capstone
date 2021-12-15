@@ -17,6 +17,7 @@ const HomePage = () => {
   const [showModal2, setShowModal2] = useState("close-modal");
   const [showModal3, setShowModal3] = useState("close-modal");
   const [showModal4, setShowModal4] = useState("close-modal");
+  const [showModal5, setShowModal5] = useState("close-modal");
   const navigate = useNavigate();
 
   const handleIconClick = () => {
@@ -44,6 +45,13 @@ const HomePage = () => {
   }
   const closeKnifeModal = () => {
     setShowModal4("close-modal");
+  }
+  const handleSkullClick = () => {
+    setShowModal5("show-modal skull-modal");
+    // setTimeout(setShowModal5("close-modal"),3000);
+  }
+  const closeSkullModal = () => {
+    setShowModal5("close-modal");
   }
 
   const closeModal = () => {
@@ -102,6 +110,9 @@ const HomePage = () => {
         </div>
        
       </div>
+      <div className={showModal5} onClick={() => closeSkullModal()}>
+        <img src="./handprints.png" alt="handprints"/>
+      </div>
       <Link to="/horrorPage">
         <button className="button-62" role="button">Register</button>
       </Link>
@@ -110,7 +121,7 @@ const HomePage = () => {
         <footer>
         <div className="footer">
       <img src={murderKnife} className="footer-image footer-knife" onClick={() => handleKnifeClick()}></img>
-          <img src={skull} className="footer-image footer-skull"></img>
+          <img src={skull} className="footer-image footer-skull" onClick={() => {handleSkullClick(); setTimeout(() => {setShowModal5("close-modal")}, 5000);}}></img>
           </div>
         </footer>
       </body>

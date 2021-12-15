@@ -251,6 +251,7 @@
     grid-template-areas: "drop1 drop2 drop3";
 }
 
+
 .drop {
   position: relative;
     width: 20px;
@@ -479,6 +480,18 @@
     }
   }
 
+  .skull-modal img{
+      height: 80%;
+      opacity: 0.8;
+      width: auto;
+      animation: slowFade 5s;
+      filter: drop-shadow(0 0 8rem rgb(255, 255, 255));
+      
+  }
+  .skull-modal{
+      background: transparent;
+  }
+  
   .close-modal{
       display: none;
   }
