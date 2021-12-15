@@ -23,6 +23,7 @@ import { useParams } from "react-router";
         <div className="zodiac_image">image</div>
         <div className="zodiac_image_dark">imageDark</div>
         <div className="zodiac_background">background</div>
+        <div className="moon-container">
         <div className="moon">
            <p id="positiveMatch"> positive match </p>
            {description.positiveMatch != null ? (<p>{description.positiveMatch}</p>) : (<p>Coming soon...</p>)}
@@ -31,7 +32,7 @@ import { useParams } from "react-router";
          <p id="negativeMatch"> negative match </p>
         {description.negativeMatch != null ? (<p>{description.negativeMatch}</p>) : (<p>Coming soon...</p>)}
         </div> 
-
+      </div>
         <div class="emptyLine"></div>
 
         <div className="cardEffect">

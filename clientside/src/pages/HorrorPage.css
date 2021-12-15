@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
 body {
     /* background-color: black; */
@@ -213,6 +214,7 @@ body {
     margin: 0 1rem;
     color: white;
     text-decoration: none;
+    font-family: 'Cinzel', serif;
 }
 
 .title-horror {

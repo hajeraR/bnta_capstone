@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 
 // Bring in the asynchronous fetchPosts action
@@ -100,6 +101,9 @@ const CalendarPage = () => {
         :
         <></>}
       </section>
+      <div className="horrorpage-link-div">
+      <Link to="/horrorPage" className="horrorpage-link link-items">Return to horrorpage</Link>
+      </div>
       </body>
     )
 }

@@ -122,3 +122,71 @@ img{
     text-shadow: 0 0 20px #fff, 0 0 30px #850000, 0 0 40px #850000, 0 0 50px #850000, 0 0 60px #850000, 0 0 70px #850000, 0 0 80px #850000;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .month {
+    margin-top: -5%;
+    
+  }
+
+  .modal-wrapper {
+    width: 50%;
+  }
+
+  .horrorscope {
+    padding: 0 2rem;
+  }
+
+  .zodiac-sign {
+    font-size: 10vw;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .zodiac-sign {
+    margin-top: 15%;
+    font-size: 12vw;
+  }
+
+  .month {
+    font-size: 4vw;
+    margin-top: -3%;
+  }
+
+  .horrorscope {
+    font-size: 3vw;
+  }
+
+  .modal-wrapper {
+   width: 60%;
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  .modal-wrapper{
+    width: 90%;
+    height: 80%;
+    font-size: 6vw;
+  }
+
+  .close {
+    margin-top: -8%;
+    margin-right: -10%;
+  }
+
+  .horrorscope{
+    font-size: 5vw;
+  }
+
+  .month {
+    font-size: 8vw;
+    margin-top: -5%;
+  }
+
+}
+
+
+
