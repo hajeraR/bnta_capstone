@@ -48,7 +48,7 @@ class EmailServiceTest {
 
     @Test
     void shouldGetEmail() {
-        Email email = new Email(1,"email@email.com", "Virgo");
+        Email email = new Email(1,"email@email.com", "Virgo", "haj", "rahman");
 
         List<Email> eList = List.of(email);
         when(emailDAO.selectEmailByEmail("email@email.com")).thenReturn(Optional.ofNullable(eList.get(0)));
@@ -61,13 +61,13 @@ class EmailServiceTest {
 
     @Test
     void addEmail() {
-        Email email = new Email(1,"email@email.com", "Virgo");
+        Email email = new Email(1,"email@email.com", "Virgo", "Bob", "b");
 
         List<Email> eList = List.of(email);
         when(emailDAO.insertEmail("example@email.com","pisces")).thenReturn(1);
 
 //         int actual = underTest.addEmail("example@email.com","pisces");
-        int actual = underTest.addEmail("example@email.com","pisces");
+        int actual = underTest.addEmail("example@email.com","pisces", "bob", "b");
 
          assertEquals(1, actual);
     }
@@ -75,12 +75,12 @@ class EmailServiceTest {
 
     @Test
     void shouldProduceErrorTryingToAddInvalidEmail() {
-        Email email = new Email(1, "John", "Pisces");
+        Email email = new Email(1, "John", "Pisces", "bob", "b");
         List<Email> eList = List.of(email);
 
         when(emailDAO.insertEmail("john", "Pisces")).thenReturn(1);
 
-        assertThatThrownBy(() -> underTest.addEmail("john", "Pisces"))
+        assertThatThrownBy(() -> underTest.addEmail("john", "Pisces", "bob", "b"))
             .isInstanceOf(Exceptions.class)
                 .hasMessageContaining("Email is not valid");
     }
@@ -89,7 +89,7 @@ class EmailServiceTest {
     void deleteEmail() {
 
        //given
-        Email email = new Email(1,"email@email.com", "Virgo");
+        Email email = new Email(1,"email@email.com", "Virgo", "Bob", "b");
         emailDAO.selectEmailByEmail("email@email.com");
         List<Email> eList = List.of(email);
 
@@ -105,7 +105,7 @@ class EmailServiceTest {
 
     @Test
     void shouldThrowErrorIfEmailDoesNotExist(){
-        Email email = new Email(1,"email@email.com", "Virgo");
+        Email email = new Email(1,"email@email.com", "Virgo", "bob", "b");
 
         List<Email> eList = List.of(email);
 

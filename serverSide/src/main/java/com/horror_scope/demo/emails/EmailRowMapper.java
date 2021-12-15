@@ -12,7 +12,10 @@ public class EmailRowMapper implements RowMapper<Email> {
         Email email = new Email (
                 rs.getInt("id"),
                 rs.getString("email"),
-                rs.getString("zodiacSign")
+                rs.getString("zodiacSign"),
+                rs.getString("firstName"),
+                rs.getString("lastName")
+
         );
         return email;
     }

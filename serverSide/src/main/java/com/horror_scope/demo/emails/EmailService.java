@@ -1,8 +1,10 @@
 package com.horror_scope.demo.emails;
 
 import com.horror_scope.demo.exception.Exceptions;
+import com.horror_scope.demo.horrorscope.HorrorScope;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,18 +28,23 @@ public class EmailService{
         return result;
     }
 
+    public List<Email> getEmail() {
+        return emailDAO.selectEmails();
+    }
+
     public Optional<Email> getEmail(String email) {
         return emailDAO.selectEmailByEmail(email);
     }
 
-    public int addEmail (String email, String zodiacSign){
+    public int addEmail (String email, String zodiacSign, String firstName, String lastName) {
 
-        if (isValid(email)){
+        if (isValid(email)) {
             emailDAO.insertEmail(email, zodiacSign);
         } else {
             throw new Exceptions("Email is not valid");
         }
-        return 1;
+    return 1;
+
     }
 
     public int deleteEmail (String email){
