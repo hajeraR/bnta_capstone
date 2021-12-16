@@ -89,20 +89,20 @@ const CalendarPage = () => {
         </div>
 
         <div className="monthButtons">
-          <button onClick={() => chooseMonth("January")} className="button-month">
+          <button onClick={() => chooseMonth("JANUARY")} className="button-month">
             January
           </button>
-          <button onClick={() => chooseMonth("February")} className="button-month">February</button>
-          <button onClick={() => chooseMonth("March")} className="button-month">March</button>
-          <button onClick={() => chooseMonth("April")} className="button-month">April</button>
-          <button onClick={() => chooseMonth("May")} className="button-month">May</button>
-          <button onClick={() => chooseMonth("June")} className="button-month">June</button>
-          <button onClick={() => chooseMonth("July")} className="button-month">July</button>
-          <button onClick={() => chooseMonth("August")} className="button-month">August</button>
-          <button onClick={() => chooseMonth("September")} className="button-month">September</button>
-          <button onClick={() => chooseMonth("October")} className="button-month">October</button>
-          <button onClick={() => chooseMonth("November")} className="button-month">November</button>
-          <button onClick={() => chooseMonth("December")} className="button-month">December</button>
+          <button onClick={() => chooseMonth("FEBURARY")} className="button-month">February</button>
+          <button onClick={() => chooseMonth("MARCH")} className="button-month">March</button>
+          <button onClick={() => chooseMonth("APRIL")} className="button-month">April</button>
+          <button onClick={() => chooseMonth("MAY")} className="button-month">May</button>
+          <button onClick={() => chooseMonth("JUNE")} className="button-month">June</button>
+          <button onClick={() => chooseMonth("JULY")} className="button-month">July</button>
+          <button onClick={() => chooseMonth("AUGUST")} className="button-month">August</button>
+          <button onClick={() => chooseMonth("SEPTEMBER")} className="button-month">September</button>
+          <button onClick={() => chooseMonth("OCTOBER")} className="button-month">October</button>
+          <button onClick={() => chooseMonth("NOVEMBER")} className="button-month">November</button>
+          <button onClick={() => chooseMonth("DECEMBER")} className="button-month">December</button>
         </div>
         {calendarMonth.length > 0 ?
           <Calendar chooseMonth={chooseMonth} setShownMonth={setShownMonth} setCalendarMonth={setCalendarMonth} calendar={calendarMonth} />

@@ -28,7 +28,7 @@ class Wheel extends React.Component {
             y: parseFloat(this.wheel.style.height) / 2
         }
         let temp_cards = [];
-
+ 
         for (let i = 0; i < 12; i++) {
             temp_cards.push(
                 <CuteCard radius={this.state.radius} theta={(Math.PI / 6) * i} center={center_of_wheel} key={`card_${i}`} pic={`./cuteZodiacs/${i}-cuteZodiac.PNG`} amLoaded={this.children_loaded} clicked={this.props.clicked} handleIconClick={() => this.props.handleIconClick()}/>
