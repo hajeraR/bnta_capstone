@@ -18,7 +18,6 @@ import { Description } from '../components/Description'
 const DescriptionsPage = () => {
 
   const { zodiacSign }  = useParams();
-  const { validZodiac, setValidZodiac } = useState(false);
 
 
   const dispatch = useDispatch();
@@ -43,9 +42,9 @@ const DescriptionsPage = () => {
 
 
     return (
-      zodiacSign == "capricorn" || zodiacSign == "sagittarius" || zodiacSign == "scorpio" || zodiacSign == "libra" || 
-      zodiacSign == "virgo" || zodiacSign == "leo" || zodiacSign == "cancer" || zodiacSign == "gemini" || zodiacSign == "taurus" || 
-      zodiacSign == "aries" || zodiacSign == "pisces" || zodiacSign == "aquarius" ?
+      zodiacSign === "capricorn" || zodiacSign === "sagittarius" || zodiacSign === "scorpio" || zodiacSign === "libra" || 
+      zodiacSign === "virgo" || zodiacSign === "leo" || zodiacSign === "cancer" || zodiacSign === "gemini" || zodiacSign === "taurus" || 
+      zodiacSign === "aries" || zodiacSign === "pisces" || zodiacSign === "aquarius" ?
       (<body id="description_page">
         <section>
         <Link to="/horrorPage" className="homeLink"><AiOutlineHome className="home-icon"/></Link>
