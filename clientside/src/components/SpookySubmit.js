@@ -150,7 +150,22 @@ const SpookySubmit = () => {
                     <input className="horror-input" type="text" placeholder="FIRST NAME" id="firstName-input" onChange={handleFirstNameChange}></input>
                     <input className="horror-input" type="text" placeholder="LAST NAME" id="lastName-input" onChange={handleLastNameChange}></input>
                     <input className="horror-input" type="email" placeholder="EMAIL" id="email-input" onChange={handleEmailChange}></input>
-                    <input className="horror-input" type="text" placeholder="ZODIAC SIGN" id="zodiac-input" onChange={handleZodiacChange}></input>
+                    {/* <input className="horror-input" type="text" placeholder="ZODIAC SIGN" id="zodiac-input" onChange={handleZodiacChange}></input> */}
+                    <select className="horror-input" name="zodiac-sign" id="zodiac-sign" placeholder="ZODIAC SIGN" onChange={handleZodiacChange}>
+                        <option disabled selected value> ZODIAC SIGN </option>
+                        <option value="Capricorn">Capricorn</option>
+                        <option value="Aquarius">Aquarius</option>
+                        <option value="Pisces">Pisces</option>
+                        <option value="Aries">Aries</option>
+                        <option value="Taurus">Taurus</option>
+                        <option value="Gemini">Gemini</option>
+                        <option value="Cancer">Cancer</option>
+                        <option value="Leo">Leo</option>
+                        <option value="Virgo">Virgo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Scorpio">Scorpio</option>
+                        <option value="Sagittarius">Sagittarius</option>
+                    </select>
 
                 </div>
                 <div className="horror-button-container">
