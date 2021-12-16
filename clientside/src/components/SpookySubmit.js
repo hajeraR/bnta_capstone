@@ -151,7 +151,7 @@ const SpookySubmit = () => {
                     <input className="horror-input" type="text" placeholder="LAST NAME" id="lastName-input" onChange={handleLastNameChange}></input>
                     <input className="horror-input" type="email" placeholder="EMAIL" id="email-input" onChange={handleEmailChange}></input>
                     {/* <input className="horror-input" type="text" placeholder="ZODIAC SIGN" id="zodiac-input" onChange={handleZodiacChange}></input> */}
-                    <select className="horror-input" name="zodiac-sign" id="zodiac-sign" placeholder="ZODIAC SIGN" onChange={handleZodiacChange}>
+                    <select className="horror-input" name="zodiac-sign" id="zodiac-input" placeholder="ZODIAC SIGN" onChange={handleZodiacChange} >
                         <option disabled selected value> ZODIAC SIGN </option>
                         <option value="Capricorn">Capricorn</option>
                         <option value="Aquarius">Aquarius</option>
