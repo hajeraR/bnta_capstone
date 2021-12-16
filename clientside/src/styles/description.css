@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&display=swap');
 
 
 #description_page {
@@ -337,6 +337,60 @@
       box-shadow: 1px 1px 30px rgb(136, 37, 37), -1px 1px 30px rgb(136, 37, 37), 1px -1px 30px rgb(136, 37, 37), -1px -1px 30px rgb(136, 37, 37);
   }
 
+  .errorPage {
+      background: rgb(32, 32, 32);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      z-index: 4;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+      align-content: center;
+      justify-content: center;
+     
+  }
+
+  .errorPage h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 120px;
+    text-align: center;
+    position: relative;
+    z-index: 4;
+    text-shadow: 8px 8px  rgb(167, 70, 70);
+    margin-top: 5%;
+  }
+
+ .errorPage a {
+     font-size: 36px;
+     font-family: 'Bebas Neue', cursive;
+     background: rgb(167, 70, 70);
+     border-radius: 50%;
+     width: 70px;
+     height: 70px;
+     text-align: center;
+     padding: 1.25%;
+     box-shadow: 3px 2px white;
+     text-decoration: none;
+     position: relative;
+     z-index: 4;
+     margin-top: -5%;
+ }
+
+ .errorPage a:visited, .errorPage a:active {
+    text-decoration: none;
+    color: white;
+ }
+
+ .errorPage a:hover {
+     transition: 0.5s;
+     color: rgb(167, 70, 70);
+     background: white;
+     box-shadow: 3px 2px rgb(167, 70, 70);
+ }
+
+ 
   
 @media screen and (max-width: 900px) {
     .twinkling {
@@ -468,7 +522,19 @@
         /* padding-right: -5%; */
     }
 
-    
+    .errorPage h1 {
+        font-size: 80px;
+        text-shadow: 5px 5px  rgb(167, 70, 70);
+        margin-top: 0;
+      }
+
+    .errorPage a {
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        padding: 1.6%;
+    }
+
 }
   
 
@@ -580,6 +646,20 @@
       .zodiac_sign {
           margin-top: 2rem;
       }
+
+      .errorPage h1 {
+        font-size: 60px;
+        text-shadow: 5px 5px  rgb(167, 70, 70);
+      }
+
+      .errorPage a {
+        font-size: 20px;
+        box-shadow: 3px 2px white;
+        width: 50px;
+        height: 50px;
+        padding: 14px;
+        
+    }
 
       
   }

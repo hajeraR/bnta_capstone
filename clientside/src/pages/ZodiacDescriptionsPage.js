@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router";
 import { Link } from 'react-router-dom'
 import { AiOutlineHome } from "react-icons/ai";
+import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 
 
 // Bring in the asynchronous fetchPosts action
@@ -16,8 +17,8 @@ import { Description } from '../components/Description'
 
 const DescriptionsPage = () => {
 
-  // const [zodiacSignName, setZodiacSignName] = useState("Virgo");
   const { zodiacSign }  = useParams();
+  const { validZodiac, setValidZodiac } = useState(false);
 
 
   const dispatch = useDispatch();
@@ -37,15 +38,15 @@ const DescriptionsPage = () => {
       }
       else{ 
         return <Description key={descriptions.id} description={descriptions} />
-      }
-    ;
-
-
+      };
   }
 
 
     return (
-      <body id="description_page">
+      zodiacSign == "capricorn" || zodiacSign == "sagittarius" || zodiacSign == "scorpio" || zodiacSign == "libra" || 
+      zodiacSign == "virgo" || zodiacSign == "leo" || zodiacSign == "cancer" || zodiacSign == "gemini" || zodiacSign == "taurus" || 
+      zodiacSign == "aries" || zodiacSign == "pisces" || zodiacSign == "aquarius" ?
+      (<body id="description_page">
         <section>
         <Link to="/horrorPage" className="homeLink"><AiOutlineHome className="home-icon"/></Link>
         {renderDescriptions()}
@@ -53,7 +54,17 @@ const DescriptionsPage = () => {
         <div class="twinkling"></div>
         <div class="clouds"></div>
       </section>
-      </body>
+      </body>)
+      : 
+      <div className = "errorPage">
+      
+      <h1>404: Page not found</h1>
+      <a href="/horrorPage"><HiOutlineArrowNarrowLeft /></a>
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <div class="clouds"></div>
+      
+      </div>
       
     )
 }
