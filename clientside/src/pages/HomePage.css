@@ -1062,6 +1062,10 @@
     }
 }
 
+.mobileZodiacs {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
     #home-page-body{
         height: 110vh;
@@ -1074,7 +1078,7 @@
     }
 
     .button-62 {
-        margin-bottom: -5%;
+        margin-bottom: -7%;
     }
 
     .footer {
@@ -1085,4 +1089,151 @@
         height: 110vh;
     }
     
+}
+
+@media screen and (max-width: 600px){
+  .flower-test {
+    display: none;
+  }
+
+  .button-62 {
+    margin-left: -4%;
+    margin-bottom: -10%;
+  }
+
+  #home-page-body{
+    height: 110vh;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .footer-knife, .footer-skull {
+    width: 15%;
+    margin-top: -3%;
+  }
+
+  .show-modal img {
+    width: 90%;
+    height: auto;
+  }
+
+  .dare h1 {
+    font-size: 150px;
+    margin-left: -5%;
+  }
+
+  .drop{
+    top: 75px;
+  }
+
+  .drop2 {
+    top: 75px;
+    margin-left: 55%;
+  }
+
+  .wave2 {
+    margin-left: 55%;
+  }
+}
+
+@media screen and (max-width: 430px){
+
+  #home-page-body{
+    height: 125vh;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .wheel-div {
+    display: none;
+  }
+
+  .mobileZodiacs img{
+    width: 65%;
+    height: auto;
+  }
+
+  #mobileImage:hover {
+    width: 70%;
+  }
+
+
+  .mobileZodiacs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-left: 16%;
+    margin-top: -6%;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .title, .cute-span {
+    font-size: 60px;
+    margin-top: 5%;
+  }
+
+  .button-62 {
+   margin-left: -9%;
+   margin-bottom: -40%;
+   
+  }
+
+  .warning-box{
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+
+  #home-page-body{
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .wheel-div {
+    display: none;
+  }
+
+  .mobileZodiacs img{
+    width: 70%;
+    height: auto;
+  }
+
+  #mobileImage:hover {
+    width: 80%;
+  }
+
+
+  .mobileZodiacs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-left: 13%;
+    margin-top: -6%;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .title, .cute-span {
+    font-size: 45px;
+    margin-top: 5%;
+  }
+
+  .button-62 {
+   margin-left: -14%;
+   margin-bottom: -6%;
+   
+  }
+
+  .warning-box{
+    text-align: center;
+  }
+
 }

@@ -77,6 +77,22 @@ const HomePage = () => {
           <CuteWheel clicked={clicked} handleIconClick={() => handleIconClick()}/>
           <img src={magicCircle} className="magic-circle" ></img>
       </div>
+
+      <div className="mobileZodiacs" onClick={handleIconClick}>
+      <img src={`./cuteZodiacs/0-cuteZodiac.PNG`} id="mobileImage" />
+      <img src={`./cuteZodiacs/1-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/2-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/3-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/4-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/5-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/6-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/7-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/8-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/9-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/10-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/11-cuteZodiac.PNG`} id="mobileImage"/>
+    </div>
+
       <div className={showModal1} onClick={() => closeModal()}>
         <div className="warning-box">
           <h3>Do you really want to know your future?</h3>

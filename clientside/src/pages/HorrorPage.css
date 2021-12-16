@@ -83,6 +83,7 @@ body {
 }
 
 .spooky-submit-component {
+    top: 90%;
 	margin: 0;
 	/* background: #000; */
 	font-size: 20px;
@@ -92,9 +93,12 @@ body {
     margin-top: -12%;
     /* margin-left: 50%; */
 }
-
+.form-container-div{
+/* top: 50; */
+}
 .form-container {
-	padding-top: 43vh;
+	padding-top: 0;
+    top: 39vh;
     height: 3rem;
 	display: flex;
     justify-content: center;
@@ -108,6 +112,7 @@ body {
         " . . subscribe . . "; */
         position: relative;
         z-index: 4;
+        /* margin-left: 3%; */
     
 }
 
@@ -118,18 +123,33 @@ body {
 
 .horror-input {
 	width: 14rem;
-	height: 1.5em;
+	height: 2.8em;
 	border: 1px solid white;
-	padding: 2px 5px 2px 5px;
 	font-family: "Cinzel", cursive;
-	font-size: inherit;
     margin: 0 1rem;
     border-radius: 10px;
     text-align: center;
     /* grid-area: test; */
     background-color: black;
     color: white;
+    font-size: 16px;
+    /* padding: 2%; */
     
+}
+
+/* #zodiac-input {
+    /* border: 1px solid blue; */
+    /* margin-top: 20px; */
+/* padding: 0;
+height: 2.8em;
+width: 14rem;
+} */ 
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .horror-input:focus {
@@ -149,9 +169,10 @@ body {
 	font-family: "Cinzel", cursive;
 	letter-spacing: 3px;
     /* margin-left: 2rem; */
-    margin: 1.5rem 0 0 0.6rem;
+    margin: 0;
+    margin-top: 1em;
     border-radius: 5px;
-    /* grid-area: subscribe; */
+    
 }
 
 /* .button-dare-div {
@@ -241,6 +262,11 @@ body {
       padding-bottom: 5%;
       padding-top: 15%;
       /* box-shadow: 1px 1px 50px rgb(224, 188, 248), -1px 1px 50px rgb(224, 188, 248), 1px -1px 50px rgb(224, 188, 248), -1px -1px 50px rgb(224, 188, 248); */
+}
+
+.link-items:hover {
+    color: rgb(202, 176, 245);
+    text-shadow: 5px 5px 20px rgb(202, 176, 245);
 }
 
 #navSymbol {
@@ -532,6 +558,7 @@ margin-top: -0.5%
         
     }
 
+
     .home-icon-container {
         margin-top: 2.5%;
         
@@ -566,6 +593,24 @@ margin-top: -0.5%
    #navWords{
        display: none;
    }
+   
+   .form-container {
+       /* margin-left: 5%; */
+    }
+
+    .horror-button {
+        /* margin-left: 5%; */
+    }
+
+    .horror-input {
+        width: 20%;
+        font-size: 16px;
+        /* padding: 2%; */
+    }
+
+    .horrorpage-header {
+        margin-left: 4%;
+    }
     
 }
 
@@ -603,12 +648,110 @@ margin-top: -0.5%
 
     .form-container {
         margin-top: -20%;
+        /* margin-left: 22%; */
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center; */
     }
+    .input-container {
+       /* margin-left: -25%; */
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
+       justify-items: center;
+    }
+    
+    .horror-button {
+        /* margin-left: -40%; */
+    }
+    
+    .horrorpage-header {
+        margin-left: 2%;
+    }
+
+    .horror-input {
+        width: 70%;
+        font-size: 14px;
+        /* padding: 3%; */
+        margin-top: 1rem;
+    }
+    .horror-button-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* margin-left: -12%; */
+    }
+    /* #zodiac-input {
+        width: 9rem;
+        height: 1.8rem;
+    }
+    .input-container {
+        margin-left: -15%;
+    } */
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 430px) {
+    .horrorpage-header{
+        width: 100%;
+        display: flex;
+        flex-direction: horizontal;
+    }
+    .horrorpage-header h1{
+        /* font-size: medium; */
+        font-size: 25px;
+       
+    }
     .cloudsHorror {
         display: none;
+    }
+
+    .starsHorror, .twinklingHorror {
+        display: none;
+        
+    }
+
+    /* form {
+        height: 50px;
+        padding-top: 0;
+    } */
+
+    .form-container-div {
+       width: 100%;
+       margin: 0;
+        
+    }
+    .form-container {
+        margin-top: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .input-container{
+        top: 0;
+        /* margin-left: -8%; */
+        /* margin-top: 3rem; */
+        align-self: center;
+        /* margin: 3rem 0 0 6rem; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -75%;
+        
+    }
+
+    #subscribe {
+        /* margin-top: 0; */
+        padding: 0;
+        /* margin-left: 5rem; */
+        align-self: center;
+        margin: auto;
+    }
+
+ 
+    .spooky-submit-component{
+      margin-top: 0;
     }
 
     .horror-magic-circle {
@@ -620,8 +763,88 @@ margin-top: -0.5%
     }
 
     .small-horror-zodiacs {
-        display: inline;
-       z-index: 6;
+        /* background-color: white; */
+        /* display: block; */
+        top: 20%;
+        width: 100%;
+        height: 60%;
+        /* margin-bottom: 5rem; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: space-around;
+        justify-content: center;
+        justify-items: center;
+     
+        
+       /* z-index: 6; */
     }
 
+    .small-zodiac-button {
+        background: rgb(224, 188, 248);
+        /* background-color: #660000; */
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+        padding: 0.5em 1em;
+        /* margin-top: 1em; */
+        font-family: "Cinzel", cursive;
+        letter-spacing: 3px;
+        /* margin-left: 2rem; */
+        margin: 1.5rem 1rem 0 0.6rem;
+        /* margin: 2rem 0 0 2rem; */
+        border-radius: 5px;
+        width: 9rem;
+    
+    }
+
+    .calendar-icon-container, .home-icon-container {
+        margin-top: 0.5rem;
+    }
+    .horror-input {
+        width: 8rem;
+        margin-bottom: 1rem;
+    }
+    .horror-button {
+        align-self: center;
+        /* margin: 1rem 6rem 1rem 1rem; */
+        margin: 0;
+        text-align: center;
+    }
+    .horror-button-container {
+        width: 100%;
+      
+      
+    }
+   
+
+}
+
+@media screen and (max-width: 320px) {
+    .small-zodiac-button {
+        font-size: 12px;
+        width: 8rem;
+    }
+
+    .horror-input {
+        width: 8rem;
+       
+    }
+
+    .horror-button {
+        align-self: center;
+        margin: auto;
+        font-size: 15px;
+    }
+    .input-container {
+        /* margin-top: 5rem; */
+        /* margin-left: 0.1rem; */
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .horrorpage-header h1 {
+        font-size: 20px;
+    }
 }
