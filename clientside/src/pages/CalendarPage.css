@@ -43,6 +43,12 @@
     height:4.5em;
     width: auto;
 }
+.zodiac-icon-buttons:hover{
+    filter: drop-shadow(0 0 8rem rgb(255, 255, 255));
+    height: 5em;
+    /* box-shadow: 0 0 15px  #3b5998; */
+}
+
 .zodiacButtons{
     display: flex;
     justify-content: space-around;
@@ -635,7 +641,9 @@
     494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
     498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
-
+.small-title-bar{
+    display: none;
+}
 
 @keyframes animStar {
     from {
@@ -648,7 +656,7 @@
 
 @media screen and (max-width: 900px) {
     .monthButtons{
-        margin-top: -10%;
+        /* margin-top: -10%; */
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -678,12 +686,49 @@
     .horrorpage-link-div {
         margin-bottom: 8%;
     }
+    .small-title-bar{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    .calendar-title-input{
+        width: 80%;
+        height: 40px;
+        border: 1px solid white;
+        font-family: "Cinzel", cursive;
+        margin: 0 1rem;
+        border-radius: 10px;
+        text-align: center;
+        /* grid-area: test; */
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        /* padding: 2%; */
+        margin-top: 2em;
+    }
+    .calendar-title-input option {
+        margin:0;
+    }
+    .title-bar{
+        display: none;
+    }
 }
 
+
 @media screen and (max-width: 600px) {
+    
     .monthButtons{
         grid-template-columns: 1fr 1fr;
-        margin-top: -10%;
+        margin-top: 5%;
+        margin: 0;
+        /* margin-top: -10%; */
+    }
+    .button-month{
+        width:90%;
+        height: 5em;
+        margin: auto;
+        margin-top: 1em;
     }
 
     .zodiac-icon-buttons{
@@ -710,6 +755,7 @@
     }
 
     .horrorpage-link-div {
+        margin-top: 15%;
         margin-bottom: 15%;
     }
 
@@ -719,6 +765,13 @@
     .monthButtons{
         grid-template-columns: 1fr;
         margin-top: 5%;
+        margin: 0;
+    }
+    .button-month{
+        width:90%;
+        height: 5em;
+        margin: auto;
+        margin-top: 1em;
     }
 
     .zodiac-icon-buttons{

@@ -72,8 +72,19 @@ const HorrorPage = () => (
       View Descriptions
     </Link> */}
     <div className="small-horror-zodiacs">
-    <button>Capricorn</button>
-      </div>
+      <Link to="/descriptions/capricorn"><button className="small-zodiac-button">Capricorn</button></Link>
+      <Link to="/descriptions/sagittarius"><button className="small-zodiac-button">Sagittarius</button></Link>
+      <Link to="/descriptions/scorpio" ><button className="small-zodiac-button">Scorpio</button></Link>
+      <Link to="/descriptions/libra"><button className="small-zodiac-button">Libra</button></Link>
+      <Link to="/descriptions/virgo"><button className="small-zodiac-button">Virgo</button></Link>
+      <Link to="/descriptions/leo"><button className="small-zodiac-button">Leo</button></Link>
+      <Link to="/descriptions/cancer"><button className="small-zodiac-button">Cancer</button></Link>
+      <Link to="/descriptions/gemini"><button className="small-zodiac-button">Gemini</button></Link>
+      <Link to="/descriptions/taurus"><button className="small-zodiac-button">Taurus</button></Link>
+      <Link to="/descriptions/aries"><button className="small-zodiac-button">Aries</button></Link>
+      <Link to="/descriptions/pisces"><button className="small-zodiac-button">Pisces</button></Link>
+      <Link to="/descriptions/aquarius"><button className="small-zodiac-button">Aquarius</button></Link>
+    </div>
 
     </section>
     <section className="spooky-submit-component">

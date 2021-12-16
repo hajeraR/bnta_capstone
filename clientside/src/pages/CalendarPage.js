@@ -7,7 +7,7 @@ import { AiOutlineHome } from "react-icons/ai";
 
 
 // Bring in the asynchronous fetchPosts action
-import { fetchCalendars, calendarsSelector} from '../actions/calendarActions';
+import { fetchCalendars, calendarsSelector } from '../actions/calendarActions';
 
 import { Calendar } from '../components/Calendar'
 import './CalendarPage.css';
@@ -19,68 +19,75 @@ const CalendarPage = () => {
   const [calendarMonth, setCalendarMonth] = useState([]);
 
   const dispatch = useDispatch();
-  const  { loading, calendars, hasErrors } = useSelector(calendarsSelector);
-    useEffect(() => {
-      dispatch(fetchCalendars())
-    }, [dispatch])
+  const { loading, calendars, hasErrors } = useSelector(calendarsSelector);
+  useEffect(() => {
+    dispatch(fetchCalendars())
+  }, [dispatch])
 
   useEffect(() => {
-    if (shownMonth != ""){
-      setCalendarMonth([...calendars.filter(calendar => calendar.zodiacSign===chosenZodiac && calendar.month===shownMonth)])
+    if (shownMonth != "") {
+      setCalendarMonth([...calendars.filter(calendar => calendar.zodiacSign === chosenZodiac && calendar.month === shownMonth)])
     }
-  }, [shownMonth] )
+  }, [shownMonth])
 
- 
-   
- const chooseZodiac = (zodiac) => {
-   console.log("click: ", zodiac);
+
+
+  const chooseZodiac = (zodiac) => {
+    console.log("click: ", zodiac);
     setChosenZodiac(zodiac);
   }
 
   const chooseMonth = (month) => {
     setShownMonth(month);
   }
+  const handleZodiacTitle = (event) => {
+    setChosenZodiac(event.target.value);
+  }
 
- 
-  
-    return (
-      <body id="firstBody">
-      <section class="wrapper">
+
+
+  return (
+    <body id="firstBody">
+      <section className="wrapper">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div className="title-bar">
-        <div className="zodiacButtons">
-          <input type="image" src="./horrorZodiacs/0-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Capricorn")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/1-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Sagittarius")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/2-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Scorpio")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/3-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Libra")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/4-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Virgo")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/5-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Leo")} className="zodiac-icon-buttons"/>
+          <div className="zodiacButtons">
+            <input type="image" src="./horrorZodiacs/0-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Capricorn")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/1-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Sagittarius")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/2-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Scorpio")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/3-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Libra")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/4-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Virgo")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/5-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Leo")} className="zodiac-icon-buttons" />
+          </div>
+          <h1 id="zodiac-title" >{chosenZodiac}</h1>
+          <div className="zodiacButtons">
+            <input type="image" src="./horrorZodiacs/6-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Cancer")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/7-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Gemini")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/8-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Taurus")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/9-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aries")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/10-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Pisces")} className="zodiac-icon-buttons" />
+            <input type="image" src="./horrorZodiacs/11-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aquarius")} className="zodiac-icon-buttons" />
+          </div>
         </div>
-        <h1 id="zodiac-title" >{chosenZodiac}</h1>
-        <div className="zodiacButtons">
-          <input type="image" src="./horrorZodiacs/6-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Cancer")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/7-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Gemini")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/8-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Taurus")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/9-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aries")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/10-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Pisces")} className="zodiac-icon-buttons"/>
-          <input type="image" src="./horrorZodiacs/11-horrorZodiac.PNG" alt="" onClick={() => chooseZodiac("Aquarius")} className="zodiac-icon-buttons"/>
-          {/* <button onClick={() => chooseZodiac("Virgo")}>Virgo</button> */}
-          {/* <button onClick={() => chooseZodiac("Aquarius")}>Aquarius</button>
-          <button onClick={() => chooseZodiac("Aries")}>Aries</button> */}
-          {/* <button onClick={() => chooseZodiac("Sagittarius")}>Sagittarius</button>
-          <button onClick={() => chooseZodiac("Gemini")}>Gemini</button>
-          <button onClick={() => chooseZodiac("Capricorn")}>Capricorn</button>
-          <button onClick={() => chooseZodiac("Cancer")}>Cancer</button>
-          <button onClick={() => chooseZodiac("Taurus")}>Taurus</button>
-          <button onClick={() => chooseZodiac("Scorpio")}>Scorpio</button>
-          <button onClick={() => chooseZodiac("Leo")}>Leo</button>
-          <button onClick={() => chooseZodiac("Pisces")}>Pisces</button>
-          <button onClick={() => chooseZodiac("Libra")}>Libra</button> */}
+        <div className='small-title-bar'>
+          <select className="calendar-title-input" name="title-zodiac-sign" id="title-zodiac-sign" placeholder="ZODIAC SIGN" onChange={handleZodiacTitle}>
+            <option value="Virgo">Virgo</option>
+            <option value="Capricorn">Capricorn</option>
+            <option value="Aquarius">Aquarius</option>
+            <option value="Pisces">Pisces</option>
+            <option value="Aries">Aries</option>
+            <option value="Taurus">Taurus</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Leo">Leo</option>
+            <option value="Libra">Libra</option>
+            <option value="Scorpio">Scorpio</option>
+            <option value="Sagittarius">Sagittarius</option>
+          </select>
         </div>
-        </div>
-        
+
         <div className="monthButtons">
           <button onClick={() => chooseMonth("January")} className="button-month">
             January
@@ -97,18 +104,18 @@ const CalendarPage = () => {
           <button onClick={() => chooseMonth("November")} className="button-month">November</button>
           <button onClick={() => chooseMonth("December")} className="button-month">December</button>
         </div>
-        {calendarMonth.length > 0 ? 
-        <Calendar chooseMonth={chooseMonth} setShownMonth={setShownMonth} setCalendarMonth={setCalendarMonth} calendar={calendarMonth}/>
-        :
-        <></>}
+        {calendarMonth.length > 0 ?
+          <Calendar chooseMonth={chooseMonth} setShownMonth={setShownMonth} setCalendarMonth={setCalendarMonth} calendar={calendarMonth} />
+          :
+          <></>}
       </section>
       <div className="horrorpage-link-div">
-      <Link to="/horrorPage" className="horrorpage-link">Return to horrorpage</Link>
+        <Link to="/horrorPage" className="horrorpage-link">Return to horrorpage</Link>
       </div>
-      </body>
-    )
+    </body>
+  )
 }
-  
+
 
 
 export default CalendarPage;
