@@ -3,10 +3,14 @@ package com.horror_scope.demo.emails;
 
 import com.horror_scope.demo.horrorscope.HorrorScope;
 import com.horror_scope.demo.horrorscope.HorrorScopeRowMapper;
+import org.apache.tomcat.jni.Local;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @Repository("postgres")
@@ -20,12 +24,14 @@ public class EmailDataAccessServer implements EmailDAO{
 
     @Override
     public List<EmailToSend> selectEmails() {
+
+
         String sql = """               
                 SELECT emails.zodiacSign, descriptions.personality, descriptions.deathpredictions, monthly_horrorscopes.months, monthly_horrorscopes.horrorscope 
                 FROM emails 
                 LEFT JOIN descriptions ON lower(emails.zodiacSign) = lower(descriptions.zodiacSign) 
                 LEFT JOIN monthly_horrorscopes ON lower(monthly_horrorscopes.zodiacSign) = lower(emails.zodiacSign)
-                WHERE lower(monthly_horrorscopes.months)='december'
+                
                 """;
         return jdbcTemplate.query(sql, new EmailSentRowMapper());
     }
