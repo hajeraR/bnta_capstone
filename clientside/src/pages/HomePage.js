@@ -22,19 +22,19 @@ const HomePage = () => {
 
   const handleIconClick = () => {
     console.log(clicked);
-    if (clicked == 0) {
+    if (clicked === 0) {
       setShowModal1("show-modal");
       setShowModal2("close-modal");
       setShowModal3("close-modal");
-    } else if (clicked == 1){
+    } else if (clicked === 1){
       setShowModal1("close-modal");
       setShowModal2("show-modal");
       setShowModal3("close-modal");
-    } else if (clicked == 2) {
+    } else if (clicked === 2) {
       setShowModal1("close-modal");
       setShowModal2("close-modal");
       setShowModal3("show-modal");
-    } else if (clicked == 3) {
+    } else if (clicked === 3) {
       navigate("/horrorPage");
     }
     setClicked( clicked => clicked + 1);
@@ -72,25 +72,24 @@ const HomePage = () => {
           <div id="stars"></div>
           <div id="stars2"></div>
           <div id="stars3"></div>
-          {/* <img className="magic-circle" src={magicCircle}/> */}
           <div className="wheel-div">
           <CuteWheel clicked={clicked} handleIconClick={() => handleIconClick()}/>
           <img src={magicCircle} className="magic-circle" ></img>
       </div>
 
       <div className="mobileZodiacs" onClick={handleIconClick}>
-      <img src={`./cuteZodiacs/0-cuteZodiac.PNG`} id="mobileImage" />
-      <img src={`./cuteZodiacs/1-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/2-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/3-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/4-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/5-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/6-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/7-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/8-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/9-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/10-cuteZodiac.PNG`} id="mobileImage"/>
-      <img src={`./cuteZodiacs/11-cuteZodiac.PNG`} id="mobileImage"/>
+      <img src={`./cuteZodiacs/0-cuteZodiac.PNG`} alt="aquarius icon" id="mobileImage" />
+      <img src={`./cuteZodiacs/1-cuteZodiac.PNG`} alt="aries icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/2-cuteZodiac.PNG`} alt="cancer icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/3-cuteZodiac.PNG`} alt="capricorn icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/4-cuteZodiac.PNG`} alt="gemini icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/5-cuteZodiac.PNG`} alt="leo icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/6-cuteZodiac.PNG`} alt="libra icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/7-cuteZodiac.PNG`} alt="pisces icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/8-cuteZodiac.PNG`} alt="sagittarius icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/9-cuteZodiac.PNG`} alt="scorpio icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/10-cuteZodiac.PNG`} alt="taurus icon" id="mobileImage"/>
+      <img src={`./cuteZodiacs/11-cuteZodiac.PNG`} alt="virgo icon" id="mobileImage"/>
     </div>
 
       <div className={showModal1} onClick={() => closeModal()}>
