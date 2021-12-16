@@ -12,8 +12,8 @@ import javax.mail.MessagingException;
 @SpringBootApplication
 public class HorrorScopeApplication {
 
-	@Autowired
-	private EmailSenderService service;
+//	@Autowired
+//	private EmailSenderService service;
 	public static void main(String[] args) {
 		SpringApplication.run(HorrorScopeApplication.class, args);
 	}

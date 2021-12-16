@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,7 +33,8 @@ public class EmailService{
         return result;
     }
 
-    public List<EmailToSend> getEmail() {
+    public List<EmailToSend> getEmailToSend() {
+
         return emailDAO.selectEmails();
     }
 
