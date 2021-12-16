@@ -130,11 +130,12 @@ img{
   }
 
   .modal-wrapper {
-    width: 50%;
+    width: 80%;
   }
 
   .horrorscope {
     padding: 0 2rem;
+    font-size: 4vw;
   }
 
   .zodiac-sign {
@@ -156,11 +157,12 @@ img{
   }
 
   .horrorscope {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .modal-wrapper {
-   width: 60%;
+    height: 60%;
+   width: 80%;
   }
   
 }
@@ -168,7 +170,7 @@ img{
 @media screen and (max-width: 320px) {
   .modal-wrapper{
     width: 90%;
-    height: 80%;
+    height: 60%;
     font-size: 6vw;
   }
 
