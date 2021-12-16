@@ -1,55 +1,48 @@
-package com.horror_scope.demo.emails;
-
-import com.horror_scope.demo.emails.EmailService;
-import com.horror_scope.demo.emails.EmailToSend;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.io.IOException;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-
-@SpringBootTest
-@ActiveProfiles("test")
-@RunWith(SpringRunner.class)
-public class SpringMailIntegrationTest {
-
-    @Autowired
-    private EmailSenderService emailSenderService;
-
-    @Rule
-    public SMTPServerRule smtpServerRule = new SMTPServerRule(2525);
-
-//    @Test
-//    public void shouldSendSingleMail() throws MessagingException, IOException {
-//        SimpleMailMessage message = new SimpleMailMessage();
-//        message.setFrom("horrorscope226@gmail.com");
-//        message.setTo("horrorscope226@gmail.com");
-//        message.setSubject("test subject");
-//        message.setText("test email");
+//package com.horror_scope.demo.emails;
 //
-//        emailSenderService.sendSimpleEmail("horrorscope226@gmail.com", "test body", "test subject");
 //
-//        MimeMessage[] receivedMessages = smtpServerRule.getMessages();
-//        assertEquals(1, receivedMessages.length);
+//import com.horror_scope.demo.horrorscope.HorrorScopeDataAccessService;
+//import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.Test;
+//import org.mockito.Mock;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.mail.SimpleMailMessage;
+//import org.springframework.mail.javamail.JavaMailSender;
 //
-//        MimeMessage current = receivedMessages[0];
+//import static org.mockito.Mockito.verify;
 //
-//        assertEquals(message.getSubject(), current.getSubject());
-//        assertEquals(message.getTo(), current.getAllRecipients()[0].toString());
-//        assertTrue(String.valueOf(current.getContent()).contains(message.getText()));
+//@SpringBootTest
 //
-//    }
-
-}
+//public class SpringMailIntegrationTest {
+//
+//    private EmailSenderService emailSenderService;
+//
+//    @Mock
+//    private JavaMailSender mailSender;
+//
+//
+//
+//    @BeforeEach
+//    void setup(){
+//        emailSenderService = new EmailSenderService(mailSender);
+//        //emailController = new EmailController(emailSenderService);
+//         }
+//
+////    @Test
+////    void shouldSendSimpleMessage(){
+////        String email = "email@example.com";
+////        String body = "test body";
+////        String subject = "test subject";
+////        SimpleMailMessage message = new SimpleMailMessage();
+////         emailSenderService.sendSimpleEmail(email, body, subject);
+////
+////        verify(mailSender).send(message);
+////
+////
+////
+////    }
+//
+//}
 

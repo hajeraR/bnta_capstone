@@ -28,3 +28,4 @@ id BIGSERIAL PRIMARY KEY,
 email TEXT,
 zodiacSign TEXT
 );
+

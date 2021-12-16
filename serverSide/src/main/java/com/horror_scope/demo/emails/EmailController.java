@@ -23,6 +23,10 @@ public class EmailController {
     @Autowired
     private EmailSenderService service;
 
+//    public EmailController(EmailSenderService service) {
+//        this.service = service;
+//    }
+
     @GetMapping
     public List<EmailToSend> listEmail() {
         String MonthNow = LocalDate.now().getMonth().toString();
@@ -36,7 +40,6 @@ public class EmailController {
 
     @PostMapping
     public void addEmail(@RequestBody Email email) {
-        System.out.println(email);
 
         emailService.addEmail(email.getEmail(), email.getZodiacSign(), email.getFirstName(), email.getLastName());
         String MonthNow = LocalDate.now().getMonth().toString();
@@ -52,7 +55,7 @@ public class EmailController {
                 );
 
                 break;
-            }else System.out.println("failed");
+            }
         }
 
     }

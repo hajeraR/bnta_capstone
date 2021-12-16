@@ -24,3 +24,39 @@ INSERT INTO monthly_horrorscopes (zodiacSign, months, horrorScope)
 VALUES ('Virgo','NOVEMBER','Sagittarius is crossing your path, make sure to talk to a friend about any problems you''ve been having. Someone needs to know. Do not follow the footsteps they will lead you nowhere good. They want your help, do not give it to them.');
 INSERT INTO monthly_horrorscopes (zodiacSign, months, horrorScope)
 VALUES ('Virgo','DECEMBER','It''s getting cold, you haven''t heard from anyone in weeks. Your mother keeps calling but you never seem to get to the phone in time. You can hear the voices now, they''re calling for you. I''m so sorry, we can''t help you anymore.');
+
+
+
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Aquarius', 'People born under the Aquarius sign are eccentric and effervescent. They would sell your shoes for a houseplant. They eat so much salt that it makes others feel uncomfortable. They''re the one who bought that doll into the house.', 'On the first Wednesday of April next year you will pass away from a salty food coma.');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Aries', 'Aries can be passionate and brave. In other words, they would throw hands with just about anyone. These rams know no limits - much to the disgust of their credit card company.', 'Sometime during the next quarterly operand, during the red moon, you will meet death.');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Sagittarius', 'Next time you see a sagittarius, ask them how they are. They need it. Last year the Sagittarius lived in isolation. We are scared they will soon turn rabid. One conversation is all it takes to save a Sagittarius.', 'A bit from a rabid creature with fluffy ears will lead to your death next week.');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Gemini', 'Back-stabbing Bitches. Also trained assassins. Trust me, never turn your back at the risk of literally being stabbed. Wait, Kirsten why do you have that kni--.', 'Will be accidentally assassinated during a sniping incident in 10, 9, 8….');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Capricorn', 'Capricorn often look at the sun for inspiration. Sometimes they work so hard they become burnt out. Other times they go to buy milk and never return. However, this time they''re probably under their ex''s backyard.', 'You will die in a blazing fire, an elaborate plot planned by your ex and inspired by your current partner');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Cancer', 'Warning: have a box of tissues ready when approaching a Cancer. They like to think they''re caring and sensitive... but that''s a kind way of calling them what they really are... the resident cry babies.', 'You’’ll cry a river of tears, and will drown in your sorrows. Nobody will come back for you');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Taurus', 'As any good Taurus should know, it is important not to live with regrets. That being said, that is the sixth partner to flee the country this year and at this point it looks like it isn''t them it''s you. You really need to take a serious look at your life choices.', 'Consumed by stylised sheets you will fall through the looking glass. What are the chances that there is a flaming big rock smashing into it?');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Scorpio', 'Scorpio representatives are cunning and meticulous. Due to their conniving nature they make excellent criminal masterminds-in-training, but beware employers! They have been known to unionise.', 'Oh, it looks like you’re not compatible for the covid-19 vaccine');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Leo', 'Resident diva of all the zodiacs. Prone to jealousy and possessiveness, take their food if you dare, but be careful, this big cat will eat anything... or anyone!', 'You will be thrown off London Bridge but you survive! Well done, and then you get hit by car ');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Pisces', 'Escapist, self-pitying & lacking boundaries. Sometimes Pisces can care a little too much and be pulled into drama that they have no business being in. That''s why they''re in prison for breaking into the Tory party conference pretending to be the Minister for Justice.', 'Successful prison break will lead you to the Maldives, only for you to die by a coconut falling on your head.');
+
+INSERT INTO descriptions (zodiacSign, personality, deathPredictions)
+VALUES ('Libra', 'Friendly, happy-go-lucky, those are but a few words to describe a Libra. Another would be creepy! The person watching you from the bushes is probably a Libra.', 'Will be murdered by the previous Libra as you stole their stake-out bush');
